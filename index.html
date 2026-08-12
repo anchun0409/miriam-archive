@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>楊千嬅Live曲目誌</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-title">楊千嬅Live曲目誌</div>
+      <div class="brand-sub">唱過與未唱 · 想再聽一次</div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" class="active">歌曲</a>
+      <a href="ranking.html">Wishlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="search-wrap">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="search-input" type="text" placeholder="搜尋歌名…" autocomplete="off" />
+    </div>
+    <div class="list-toolbar">
+      <div class="filter-pills" role="group" aria-label="演出狀態篩選">
+        <button type="button" class="filter-pill active" data-live-filter="all">全部</button>
+        <button type="button" class="filter-pill" data-live-filter="performed">已有Live版</button>
+        <button type="button" class="filter-pill" data-live-filter="never">尚未有Live版</button>
+      </div>
+      <div class="result-count" id="result-count"></div>
+    </div>
+
+    <div class="song-grid" id="song-grid"></div>
+  </main>
+
+  <div class="modal-backdrop" id="setlist-modal" role="dialog" aria-modal="true" aria-labelledby="setlist-modal-title">
+    <div class="modal-panel">
+      <button type="button" class="modal-close" data-close-modal aria-label="關閉">×</button>
+      <div class="modal-header">
+        <div class="modal-title" id="setlist-modal-title"></div>
+        <div class="modal-sub" id="setlist-modal-sub"></div>
+      </div>
+      <label class="session-select-label" for="setlist-session-select">場次</label>
+      <select id="setlist-session-select" class="session-select"></select>
+      <div class="setlist-list" id="setlist-modal-list"></div>
+    </div>
+  </div>
+
+  <footer class="site-disclaimer">
+    <strong>Disclaimer</strong>
+    本站為歌迷自發製作的非官方資料庫；資料或有疏漏，僅供參考。歌單與場次整理特別感謝羽佩、Frankie的《楊千嬅演唱會Live歌曲熱力圖》及相關資料，以及其他歌迷分享的 rundown資料。設計與維護：anchun。
+    <div class="last-updated" id="last-updated"></div>
+  </footer>
+
+  <script src="js/vendor/cloudbase.bundle.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/likes.js"></script>
+  <script src="js/last-updated.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

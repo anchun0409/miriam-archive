@@ -1,0 +1,38 @@
+name: Stamp last updated
+
+on:
+  push:
+    branches: [main, master]
+    paths-ignore:
+      - "data/last-updated.json"
+
+permissions:
+  contents: write
+
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Needed so the bot can push the stamp commit back.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Write last-updated.json (Asia/Hong_Kong)
+        run: |
+          DATE=$(TZ=Asia/Hong_Kong date '+%Y-%m-%d')
+          ISO=$(TZ=Asia/Hong_Kong date '+%Y-%m-%dT%H:%M:%S%z' | sed -E 's/([0-9]{2})([0-9]{2})$/\1:\2/')
+          printf '%s\n' "{\"date\":\"${DATE}\",\"updated_at\":\"${ISO}\"}" > data/last-updated.json
+          cat data/last-updated.json
+
+      - name: Commit and push stamp
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/last-updated.json
+          if git diff --staged --quiet; then
+            echo "No timestamp change"
+            exit 0
+          fi
+          git commit -m "chore: stamp last updated [skip ci]"
+          git push
