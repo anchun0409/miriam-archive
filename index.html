@@ -32,6 +32,12 @@
         <button type="button" class="filter-pill" data-live-filter="performed">已有Live版</button>
         <button type="button" class="filter-pill" data-live-filter="never">尚未有Live版</button>
       </div>
+      <select id="song-sort" class="song-sort" aria-label="排序與篩選">
+        <option value="shows-desc">按演出場次 高→低</option>
+        <option value="shows-asc">按演出場次 低→高</option>
+        <option value="silent-3y">近三年未唱過</option>
+        <option value="silent-5y">近五年未唱過</option>
+      </select>
       <div class="result-count" id="result-count"></div>
     </div>
 
@@ -58,10 +64,7 @@
     <div class="last-updated" id="last-updated"></div>
   </footer>
 
-  <script src="js/vendor/cloudbase.bundle.js"></script>
-  <script src="js/config.js"></script>
   <script src="js/data.js"></script>
-  <script src="js/likes.js"></script>
   <script src="js/last-updated.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>

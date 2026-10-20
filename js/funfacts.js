@@ -12,6 +12,34 @@
       .replace(/"/g, "&quot;");
   }
 
+  function songHref(songId) {
+    return `index.html?song=${encodeURIComponent(songId)}`;
+  }
+
+  function concertHref(concertId, sessionId) {
+    let url = `index.html?concert=${encodeURIComponent(concertId)}`;
+    if (sessionId) url += `&session=${encodeURIComponent(sessionId)}`;
+    return url;
+  }
+
+  async function asOfMonth() {
+    // Prefer stamped last-updated month; fall back to current calendar month (HK).
+    try {
+      const res = await fetch("data/last-updated.json", { cache: "no-store" });
+      if (res.ok) {
+        const data = await res.json();
+        const date = data.date || (data.updated_at || "").slice(0, 10);
+        if (date && /^\d{4}-\d{2}/.test(date)) return date.slice(0, 7);
+      }
+    } catch (_) {}
+    const now = new Date(
+      new Date().toLocaleString("en-US", { timeZone: "Asia/Hong_Kong" })
+    );
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, "0");
+    return `${y}-${m}`;
+  }
+
   try {
     if (!window.DataLayer || typeof DataLayer.load !== "function") {
       throw new Error("DataLayer 未載入，請確認 js/data.js 路徑正確。");
@@ -24,8 +52,7 @@
     }
 
     const f = DataLayer.funFacts();
-    const [y, m] = (f.asOf || "").split("-");
-    const asOfText = y && m ? `${y}-${m}` : "—";
+    const asOfText = await asOfMonth();
 
     const topShows = (f.topSongCountShows || [])
       .map((row, i) => {
@@ -33,7 +60,7 @@
         const s = row.session;
         return `<li>
           <span class="ff-rank">Top ${i + 1}</span>
-          <span class="ff-main">${escapeHtml(c.concert_name)}</span>
+          <a class="ff-link ff-main" href="${concertHref(c.concert_id, s.session_id)}">${escapeHtml(c.concert_name)}</a>
           <span class="ff-sub">（${escapeHtml(s.city)} ${escapeHtml(s.date)}）· ${row.count} 首</span>
         </li>`;
       })
@@ -43,7 +70,7 @@
       .map(
         (row, i) => `<li>
           <span class="ff-rank">${i + 1}.</span>
-          <span class="ff-main">${escapeHtml(row.song.title)}</span>
+          <a class="ff-link ff-main" href="${songHref(row.song.song_id)}">${escapeHtml(row.song.title)}</a>
           <span class="ff-sub">${row.times} 次</span>
         </li>`
       )
@@ -59,25 +86,21 @@
       )
       .join("");
 
-    let encoreBlock = `<p class="ff-empty">暫無 Encore 資料。</p>`;
-    if (f.encoreKing && f.encoreKing.song) {
-      const sessList = (f.encoreKing.sessions || [])
-        .map(
-          (s) =>
-            `<li>${escapeHtml(s.date)} · ${escapeHtml(s.city)} · ${escapeHtml(s.concert_name)}</li>`
-        )
-        .join("");
-      encoreBlock = `
-        <p class="ff-lead"><strong>${escapeHtml(f.encoreKing.song.title)}</strong> · 安可 ${f.encoreKing.times} 次</p>
-        <p class="ff-note">出現於以下演唱會場次：</p>
-        <ul class="ff-session-list">${sessList}</ul>`;
-    }
+    const encoreTop = (f.encoreTop || [])
+      .map(
+        (row, i) => `<li>
+          <span class="ff-rank">Top ${i + 1}</span>
+          <a class="ff-link ff-main" href="${songHref(row.song.song_id)}">${escapeHtml(row.song.title)}</a>
+          <span class="ff-sub">安可 ${row.times} 次</span>
+        </li>`
+      )
+      .join("");
 
     const minorList = (f.minorThenMain || []).length
       ? f.minorThenMain
           .map(
             (row) => `<li>
-              <span class="ff-main">${escapeHtml(row.song.title)}</span>
+              <a class="ff-link ff-main" href="${songHref(row.song.song_id)}">${escapeHtml(row.song.title)}</a>
               <span class="ff-sub">首次：${escapeHtml(row.first_date)} · ${escapeHtml(row.first_concert)}</span>
             </li>`
           )
@@ -115,8 +138,10 @@
 
       <section class="ff-section">
         <h2>Encore 之王</h2>
-        <p class="ff-note">哪首歌安可最多次？分別是哪些演唱會場次</p>
-        ${encoreBlock}
+        <p class="ff-note">安可次數 Top 5（點歌名可查看歌曲卡）</p>
+        <ol class="ff-list">
+          ${encoreTop || `<li class="ff-empty">暫無資料。</li>`}
+        </ol>
       </section>
 
       <section class="ff-section">

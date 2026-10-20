@@ -145,6 +145,11 @@ main{
   margin:-10px 0 20px;
 }
 
+.list-toolbar .filter-pills,
+.list-toolbar .song-sort{
+  flex:0 0 auto;
+}
+
 .filter-pills{
   display:flex;
   flex-wrap:wrap;
@@ -176,6 +181,29 @@ main{
 .filter-pill.active{
   background:var(--purple-700);
   color:#fff;
+}
+
+.song-sort{
+  font-family:'Manrope', sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:var(--purple-700);
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:8px 14px;
+  box-shadow:var(--shadow);
+  cursor:pointer;
+  max-width:100%;
+}
+
+.song-sort:focus{
+  outline:2px solid var(--purple-300);
+  outline-offset:2px;
+}
+
+.song-sort[hidden]{
+  display:none;
 }
 
 .song-grid{
@@ -669,6 +697,19 @@ footer,
 .ff-main{
   font-weight:600;
   color:var(--text);
+}
+
+.ff-link{
+  color:var(--purple-700);
+  text-decoration:underline;
+  text-decoration-color:transparent;
+  text-underline-offset:3px;
+  transition:color .15s ease, text-decoration-color .15s ease;
+}
+
+.ff-link:hover{
+  color:var(--purple-900);
+  text-decoration-color:var(--purple-300);
 }
 
 .ff-sub{

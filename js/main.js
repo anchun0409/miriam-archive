@@ -2,6 +2,7 @@
   const grid = document.getElementById("song-grid");
   const searchInput = document.getElementById("search-input");
   const resultCount = document.getElementById("result-count");
+  const sortSelect = document.getElementById("song-sort");
   const modal = document.getElementById("setlist-modal");
   const modalTitle = document.getElementById("setlist-modal-title");
   const modalSub = document.getElementById("setlist-modal-sub");
@@ -10,14 +11,9 @@
   const modalList = document.getElementById("setlist-modal-list");
 
   await DataLayer.load();
-  await Likes.loadAll();
 
   let liveFilter = "all"; // all | performed | never
-
-  const heartIcon = (filled) => `
-    <svg viewBox="0 0 24 24" fill="${filled ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2">
-      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
-    </svg>`;
+  let songSort = "shows-desc"; // shows-desc | shows-asc | silent-3y | silent-5y
 
   function shortDate(dateStr) {
     const [, m, d] = dateStr.split("-");
@@ -118,13 +114,25 @@
     return `<div class="song-meta">${albumYear}${creditsRow}</div>`;
   }
 
+  function yearsSinceLastSung(songId) {
+    const d = DataLayer.mostRecentDateFor(songId);
+    if (!d) return Infinity;
+    const then = new Date(d + "T00:00:00");
+    const now = new Date();
+    return (now - then) / (365.25 * 24 * 60 * 60 * 1000);
+  }
+
+  function syncSortSelectVisibility() {
+    if (!sortSelect) return;
+    const show = liveFilter === "all" || liveFilter === "performed";
+    sortSelect.hidden = !show;
+  }
+
   function songCardHTML(song) {
     const history = DataLayer.performanceHistoryFor(song.song_id);
     const { shows, times } = DataLayer.performanceCountsFor(song.song_id);
     const never = times === 0;
     const lastDate = history[0]?.latest_date || null;
-    const likeCount = Likes.countFor(song.song_id);
-    const liked = Likes.hasLiked(song.song_id);
 
     const historyHTML = history.length
       ? history.map(ticketHTML).join("")
@@ -144,9 +152,6 @@
               : ""
           }
         </div>
-        <button class="like-btn ${liked ? "liked" : ""}" data-like="${song.song_id}" aria-label="喜歡">
-          ${heartIcon(liked)} <span class="like-count">${likeCount}</span>
-        </button>
       </div>
       ${songMetaHTML(song)}
       ${
@@ -174,16 +179,34 @@
       songs = songs.filter((s) => !DataLayer.hasBeenPerformed(s.song_id));
     }
 
+    const activeSort = liveFilter === "never" ? "album-asc" : songSort;
+
+    if (activeSort === "silent-3y") {
+      songs = songs.filter((s) => yearsSinceLastSung(s.song_id) >= 3);
+    } else if (activeSort === "silent-5y") {
+      songs = songs.filter((s) => yearsSinceLastSung(s.song_id) >= 5);
+    }
+
     songs.sort((a, b) => {
-      if (liveFilter === "never") {
-        const ya = a.release_year || 0;
-        const yb = b.release_year || 0;
-        if (yb !== ya) return yb - ya;
+      if (activeSort === "album-asc") {
+        const ya = a.release_year || 9999;
+        const yb = b.release_year || 9999;
+        if (ya !== yb) return ya - yb;
         return (a.title || "").localeCompare(b.title || "", "zh-Hant");
       }
+
+      if (activeSort === "silent-3y" || activeSort === "silent-5y") {
+        const da = DataLayer.mostRecentDateFor(a.song_id) || "0000-00-00";
+        const db = DataLayer.mostRecentDateFor(b.song_id) || "0000-00-00";
+        if (da !== db) return da < db ? -1 : 1;
+        return (a.title || "").localeCompare(b.title || "", "zh-Hant");
+      }
+
       const ta = DataLayer.performanceCountsFor(a.song_id).times;
       const tb = DataLayer.performanceCountsFor(b.song_id).times;
-      if (tb !== ta) return tb - ta;
+      if (ta !== tb) {
+        return activeSort === "shows-asc" ? ta - tb : tb - ta;
+      }
       const da = DataLayer.mostRecentDateFor(a.song_id) || "0000-00-00";
       const db = DataLayer.mostRecentDateFor(b.song_id) || "0000-00-00";
       if (da !== db) return da < db ? 1 : -1;
@@ -196,16 +219,26 @@
 
     if (liveFilter === "never") {
       resultCount.textContent = `共 ${songs.length} 首尚未有演唱會Live版`;
+    } else if (activeSort === "silent-3y") {
+      resultCount.textContent = `共 ${songs.length} 首近三年未唱過`;
+    } else if (activeSort === "silent-5y") {
+      resultCount.textContent = `共 ${songs.length} 首近五年未唱過`;
     } else if (liveFilter === "performed") {
       resultCount.textContent = `共 ${songs.length} 首已有演唱會Live版`;
     } else {
       resultCount.textContent = `共 ${songs.length} 首歌曲（其中 ${neverCount} 首尚未有演唱會Live版）`;
     }
 
+    syncSortSelectVisibility();
+
     if (!songs.length) {
+      let emptyHint = "請試試其他搜尋關鍵字。";
+      if (liveFilter === "never") emptyHint = "目前沒有符合的尚未有Live版歌曲。";
+      else if (activeSort === "silent-3y") emptyHint = "目前沒有近三年未唱過的歌曲。";
+      else if (activeSort === "silent-5y") emptyHint = "目前沒有近五年未唱過的歌曲。";
       grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
         <div class="big">找不到歌曲</div>
-        <div>${liveFilter === "never" ? "目前沒有符合的尚未有Live版歌曲。" : "請試試其他搜尋關鍵字。"}</div>
+        <div>${emptyHint}</div>
       </div>`;
       return;
     }
@@ -253,7 +286,7 @@
     modalList.innerHTML = html;
   }
 
-  function openSetlistModal(concertId, highlightSongId) {
+  function openSetlistModal(concertId, highlightSongId, preferredSessionId) {
     const concert = DataLayer.getConcert(concertId);
     if (!concert) return;
 
@@ -274,10 +307,13 @@
     modal.classList.add("open");
     document.body.classList.add("modal-open");
 
-    const firstId = sessions[0]?.session_id;
-    if (firstId) {
-      modalSession.value = firstId;
-      renderSetlist(firstId, highlightSongId);
+    const preferred =
+      preferredSessionId && sessions.some((s) => s.session_id === preferredSessionId)
+        ? preferredSessionId
+        : sessions[0]?.session_id;
+    if (preferred) {
+      modalSession.value = preferred;
+      renderSetlist(preferred, highlightSongId);
     }
   }
 
@@ -352,7 +388,7 @@
     setTimeout(() => card.classList.remove("flash"), 1200);
   }
 
-  grid.addEventListener("click", async (e) => {
+  grid.addEventListener("click", (e) => {
     const albumBtn = e.target.closest("[data-album]");
     if (albumBtn) {
       openAlbumModal(albumBtn.getAttribute("data-album"));
@@ -374,18 +410,6 @@
       const list = document.getElementById(`history-${id}`);
       list.classList.toggle("open");
       toggleBtn.classList.toggle("open");
-      return;
-    }
-
-    const likeBtn = e.target.closest("[data-like]");
-    if (likeBtn) {
-      const id = likeBtn.getAttribute("data-like");
-      const ok = await Likes.like(id);
-      if (ok) {
-        likeBtn.classList.add("liked");
-        likeBtn.querySelector(".like-count").textContent = Likes.countFor(id);
-        likeBtn.querySelector("svg").setAttribute("fill", "currentColor");
-      }
     }
   });
 
@@ -423,5 +447,33 @@
     render(searchInput.value);
   });
 
+  sortSelect?.addEventListener("change", () => {
+    songSort = sortSelect.value || "shows-desc";
+    render(searchInput.value);
+  });
+
   render("");
+
+  // Deep links from Fun Facts: ?song=S001 / ?concert=C008&session=C008-1
+  const params = new URLSearchParams(location.search);
+  const deepSong = params.get("song");
+  const deepConcert = params.get("concert");
+  const deepSession = params.get("session");
+
+  if (deepSong) {
+    // Ensure the song is visible (clear never-only filter if needed)
+    if (liveFilter === "never" && DataLayer.hasBeenPerformed(deepSong)) {
+      liveFilter = "all";
+      document.querySelectorAll(".filter-pill").forEach((el) => {
+        el.classList.toggle("active", el.getAttribute("data-live-filter") === "all");
+      });
+      render("");
+    }
+    jumpToSong(deepSong);
+    if (deepConcert) {
+      setTimeout(() => openSetlistModal(deepConcert, deepSong, deepSession || ""), 350);
+    }
+  } else if (deepConcert) {
+    openSetlistModal(deepConcert, "", deepSession || "");
+  }
 })();

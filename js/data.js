@@ -66,11 +66,20 @@ const DataLayer = (() => {
       .trim();
   }
 
+  // Split multi-album fields on "), " between year tags so names that
+  // contain commas (e.g. "Play It Loud, Kiss Me Soft (2000)") stay whole.
   function albumParts(album) {
-    return stripAlbumYear(album)
-      .split(",")
-      .map((p) => p.trim())
-      .filter((p) => p && p.toLowerCase() !== "n.a.");
+    if (!album) return [];
+    const raw = String(album).trim();
+    if (!raw || raw.toLowerCase() === "n.a.") return [];
+
+    const chunks = raw.split(/\)\s*,\s*/).map((chunk, i, arr) => {
+      let s = chunk.trim();
+      if (i < arr.length - 1 && !/\)$/.test(s)) s += ")";
+      return stripAlbumYear(s);
+    });
+
+    return chunks.filter((p) => p && p.toLowerCase() !== "n.a.");
   }
 
   // For a given song, build a list of "concert entries": one per concert,
@@ -195,8 +204,6 @@ const DataLayer = (() => {
   /** Stats for Fun Facts page */
   function funFacts() {
     const sessions = allSessions();
-    const latest = sessions.reduce((max, s) => (!max || s.date > max ? s.date : max), null);
-    const asOf = latest ? latest.slice(0, 7) : ""; // YYYY-MM
 
     const totalShows = sessions.length;
     const personalShows = sessions.filter((s) => {
@@ -217,7 +224,7 @@ const DataLayer = (() => {
       }))
       .filter((r) => r.count > 0 && r.concert && isPersonalConcert(r.concert))
       .sort((a, b) => b.count - a.count || (a.session.date < b.session.date ? 1 : -1));
-    const topSongCountShows = sessionRows.slice(0, 3);
+    const topSongCountShows = sessionRows.slice(0, 5);
 
     // top 10 songs by performance times
     const songCounts = {};
@@ -244,38 +251,20 @@ const DataLayer = (() => {
       .sort((a, b) => b.times - a.times || a.city.localeCompare(b.city, "zh-Hant"))
       .slice(0, 5);
 
-    // encore king
+    // encore top 5
     const encoreCounts = {};
-    const encoreSessions = {};
     raw.performances.forEach((p) => {
       if (p.is_main_rundown !== false) return;
       encoreCounts[p.song_id] = (encoreCounts[p.song_id] || 0) + 1;
-      if (!encoreSessions[p.song_id]) encoreSessions[p.song_id] = [];
-      encoreSessions[p.song_id].push(p.session_id);
     });
-    let encoreKing = null;
-    Object.entries(encoreCounts).forEach(([song_id, times]) => {
-      const song = songsById[song_id];
-      if (!song || song.is_other_artist) return;
-      if (!encoreKing || times > encoreKing.times) {
-        const sessDetails = (encoreSessions[song_id] || [])
-          .map((sid) => {
-            const sess = sessionsById[sid];
-            const c = sess ? concertsById[sess.concert_id] : null;
-            return sess && c
-              ? {
-                  date: sess.date,
-                  city: sess.city,
-                  concert_name: c.concert_name,
-                  session_id: sid,
-                }
-              : null;
-          })
-          .filter(Boolean)
-          .sort((a, b) => (a.date < b.date ? 1 : -1));
-        encoreKing = { song, times, sessions: sessDetails };
-      }
-    });
+    const encoreTop = Object.entries(encoreCounts)
+      .map(([song_id, times]) => ({
+        song: songsById[song_id],
+        times,
+      }))
+      .filter((x) => x.song && !x.song.is_other_artist)
+      .sort((a, b) => b.times - a.times || a.song.title.localeCompare(b.song.title, "zh-Hant"))
+      .slice(0, 5);
 
     // songs that started in Minor Classics / B minor, later became main rundown elsewhere
     const minorConcertIds = new Set(
@@ -311,6 +300,7 @@ const DataLayer = (() => {
           song,
           first_date: firstDate[song_id],
           first_concert: origin?.concert_name || firstConcert[song_id],
+          first_concert_id: firstConcert[song_id],
         });
       }
     });
@@ -319,13 +309,12 @@ const DataLayer = (() => {
     );
 
     return {
-      asOf,
       totalShows,
       personalShows,
       topSongCountShows,
       topSongs,
       topCities,
-      encoreKing,
+      encoreTop,
       minorThenMain,
     };
   }
