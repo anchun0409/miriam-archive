@@ -41,17 +41,18 @@
   }
 
   try {
-    if (!window.DataLayer || typeof DataLayer.load !== "function") {
+    const DL = window.DataLayer;
+    if (!DL || typeof DL.load !== "function") {
       throw new Error("DataLayer 未載入，請確認 js/data.js 路徑正確。");
     }
 
-    await DataLayer.load();
+    await DL.load();
 
-    if (typeof DataLayer.funFacts !== "function") {
+    if (typeof DL.funFacts !== "function") {
       throw new Error("DataLayer.funFacts 不存在，請重新整理或更新 js/data.js。");
     }
 
-    const f = DataLayer.funFacts();
+    const f = DL.funFacts();
     const asOfText = await asOfMonth();
 
     const topShows = (f.topSongCountShows || [])

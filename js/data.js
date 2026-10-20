@@ -2,7 +2,9 @@
 // grouped by concert (with all sessions listed), and exposes helpers used by
 // both the main page and the ranking page.
 
-const DataLayer = (() => {
+// Attach to window so pages can detect load via window.DataLayer
+// (top-level const does not become a window property).
+window.DataLayer = (() => {
   let raw = null;
   let songsById = {};
   let sessionsById = {};

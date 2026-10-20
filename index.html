@@ -10,7 +10,7 @@
   <header class="site-header">
     <div class="brand">
       <div class="brand-title">楊千嬅Live曲目誌</div>
-      <div class="brand-sub">唱過與未唱 · 想再聽一次</div>
+      <div class="brand-sub">期待再期待 下一首遺珠上桌</div>
     </div>
     <nav class="site-nav">
       <a href="index.html" class="active">歌曲</a>
@@ -32,12 +32,24 @@
         <button type="button" class="filter-pill" data-live-filter="performed">已有Live版</button>
         <button type="button" class="filter-pill" data-live-filter="never">尚未有Live版</button>
       </div>
-      <select id="song-sort" class="song-sort" aria-label="排序與篩選">
-        <option value="shows-desc">按演出場次 高→低</option>
-        <option value="shows-asc">按演出場次 低→高</option>
-        <option value="silent-3y">近三年未唱過</option>
-        <option value="silent-5y">近五年未唱過</option>
-      </select>
+      <div class="song-controls" id="song-controls">
+        <select id="song-sort" class="song-sort" aria-label="排序">
+          <option value="shows-desc">按演出場次 高→低</option>
+          <option value="shows-asc">按演出場次 低→高</option>
+        </select>
+        <div class="year-range" id="year-range" aria-label="最近演唱年份範圍">
+          <div class="year-range-head">
+            <span class="year-range-title">最近演唱</span>
+            <span class="year-range-value" id="year-range-value">—</span>
+          </div>
+          <div class="year-range-slider">
+            <div class="year-range-rail"></div>
+            <div class="year-range-fill" id="year-range-fill"></div>
+            <input type="range" id="year-from" class="year-range-input" aria-label="起始年份" />
+            <input type="range" id="year-to" class="year-range-input" aria-label="結束年份" />
+          </div>
+        </div>
+      </div>
       <div class="result-count" id="result-count"></div>
     </div>
 

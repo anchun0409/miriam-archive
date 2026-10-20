@@ -2,7 +2,12 @@
   const grid = document.getElementById("song-grid");
   const searchInput = document.getElementById("search-input");
   const resultCount = document.getElementById("result-count");
+  const songControls = document.getElementById("song-controls");
   const sortSelect = document.getElementById("song-sort");
+  const yearFromInput = document.getElementById("year-from");
+  const yearToInput = document.getElementById("year-to");
+  const yearRangeValue = document.getElementById("year-range-value");
+  const yearRangeFill = document.getElementById("year-range-fill");
   const modal = document.getElementById("setlist-modal");
   const modalTitle = document.getElementById("setlist-modal-title");
   const modalSub = document.getElementById("setlist-modal-sub");
@@ -13,7 +18,39 @@
   await DataLayer.load();
 
   let liveFilter = "all"; // all | performed | never
-  let songSort = "shows-desc"; // shows-desc | shows-asc | silent-3y | silent-5y
+  let songSort = "shows-desc"; // shows-desc | shows-asc
+
+  const yearBounds = (() => {
+    let min = Infinity;
+    let max = -Infinity;
+    DataLayer.ownSongs().forEach((s) => {
+      const d = DataLayer.mostRecentDateFor(s.song_id);
+      if (!d) return;
+      const y = Number(d.slice(0, 4));
+      if (y < min) min = y;
+      if (y > max) max = y;
+    });
+    const nowY = new Date(
+      new Date().toLocaleString("en-US", { timeZone: "Asia/Hong_Kong" })
+    ).getFullYear();
+    if (!Number.isFinite(min)) min = 2000;
+    if (!Number.isFinite(max)) max = nowY;
+    if (max < nowY) max = nowY;
+    return { min, max };
+  })();
+
+  let yearFrom = yearBounds.min;
+  let yearTo = yearBounds.max;
+
+  if (yearFromInput && yearToInput) {
+    [yearFromInput, yearToInput].forEach((el) => {
+      el.min = String(yearBounds.min);
+      el.max = String(yearBounds.max);
+      el.step = "1";
+    });
+    yearFromInput.value = String(yearFrom);
+    yearToInput.value = String(yearTo);
+  }
 
   function shortDate(dateStr) {
     const [, m, d] = dateStr.split("-");
@@ -114,18 +151,38 @@
     return `<div class="song-meta">${albumYear}${creditsRow}</div>`;
   }
 
-  function yearsSinceLastSung(songId) {
-    const d = DataLayer.mostRecentDateFor(songId);
-    if (!d) return Infinity;
-    const then = new Date(d + "T00:00:00");
-    const now = new Date();
-    return (now - then) / (365.25 * 24 * 60 * 60 * 1000);
+  function isYearFilterActive() {
+    return yearFrom > yearBounds.min || yearTo < yearBounds.max;
   }
 
-  function syncSortSelectVisibility() {
-    if (!sortSelect) return;
-    const show = liveFilter === "all" || liveFilter === "performed";
-    sortSelect.hidden = !show;
+  function lastSungYear(songId) {
+    const d = DataLayer.mostRecentDateFor(songId);
+    return d ? Number(d.slice(0, 4)) : null;
+  }
+
+  function syncYearRangeUI() {
+    if (!yearFromInput || !yearToInput) return;
+    yearFromInput.value = String(yearFrom);
+    yearToInput.value = String(yearTo);
+    if (yearRangeValue) {
+      yearRangeValue.textContent = `${yearFrom}–${yearTo}`;
+    }
+    if (yearRangeFill) {
+      const span = yearBounds.max - yearBounds.min || 1;
+      const left = ((yearFrom - yearBounds.min) / span) * 100;
+      const right = ((yearTo - yearBounds.min) / span) * 100;
+      yearRangeFill.style.left = `${left}%`;
+      yearRangeFill.style.width = `${Math.max(0, right - left)}%`;
+    }
+    // Keep the active thumb on top so overlapping ends stay draggable
+    yearFromInput.style.zIndex = yearFrom > yearBounds.min + (yearTo - yearFrom) / 2 ? "3" : "2";
+    yearToInput.style.zIndex = "2";
+    if (yearTo <= yearFrom) yearToInput.style.zIndex = "3";
+  }
+
+  function syncSongControlsVisibility() {
+    if (!songControls) return;
+    songControls.hidden = !(liveFilter === "all" || liveFilter === "performed");
   }
 
   function songCardHTML(song) {
@@ -179,33 +236,26 @@
       songs = songs.filter((s) => !DataLayer.hasBeenPerformed(s.song_id));
     }
 
-    const activeSort = liveFilter === "never" ? "album-asc" : songSort;
-
-    if (activeSort === "silent-3y") {
-      songs = songs.filter((s) => yearsSinceLastSung(s.song_id) >= 3);
-    } else if (activeSort === "silent-5y") {
-      songs = songs.filter((s) => yearsSinceLastSung(s.song_id) >= 5);
+    const yearActive = liveFilter !== "never" && isYearFilterActive();
+    if (yearActive) {
+      songs = songs.filter((s) => {
+        const y = lastSungYear(s.song_id);
+        return y != null && y >= yearFrom && y <= yearTo;
+      });
     }
 
     songs.sort((a, b) => {
-      if (activeSort === "album-asc") {
+      if (liveFilter === "never") {
         const ya = a.release_year || 9999;
         const yb = b.release_year || 9999;
         if (ya !== yb) return ya - yb;
         return (a.title || "").localeCompare(b.title || "", "zh-Hant");
       }
 
-      if (activeSort === "silent-3y" || activeSort === "silent-5y") {
-        const da = DataLayer.mostRecentDateFor(a.song_id) || "0000-00-00";
-        const db = DataLayer.mostRecentDateFor(b.song_id) || "0000-00-00";
-        if (da !== db) return da < db ? -1 : 1;
-        return (a.title || "").localeCompare(b.title || "", "zh-Hant");
-      }
-
       const ta = DataLayer.performanceCountsFor(a.song_id).times;
       const tb = DataLayer.performanceCountsFor(b.song_id).times;
       if (ta !== tb) {
-        return activeSort === "shows-asc" ? ta - tb : tb - ta;
+        return songSort === "shows-asc" ? ta - tb : tb - ta;
       }
       const da = DataLayer.mostRecentDateFor(a.song_id) || "0000-00-00";
       const db = DataLayer.mostRecentDateFor(b.song_id) || "0000-00-00";
@@ -219,23 +269,21 @@
 
     if (liveFilter === "never") {
       resultCount.textContent = `共 ${songs.length} 首尚未有演唱會Live版`;
-    } else if (activeSort === "silent-3y") {
-      resultCount.textContent = `共 ${songs.length} 首近三年未唱過`;
-    } else if (activeSort === "silent-5y") {
-      resultCount.textContent = `共 ${songs.length} 首近五年未唱過`;
+    } else if (yearActive) {
+      resultCount.textContent = `共 ${songs.length} 首（最近演唱 ${yearFrom}–${yearTo}）`;
     } else if (liveFilter === "performed") {
       resultCount.textContent = `共 ${songs.length} 首已有演唱會Live版`;
     } else {
       resultCount.textContent = `共 ${songs.length} 首歌曲（其中 ${neverCount} 首尚未有演唱會Live版）`;
     }
 
-    syncSortSelectVisibility();
+    syncYearRangeUI();
+    syncSongControlsVisibility();
 
     if (!songs.length) {
       let emptyHint = "請試試其他搜尋關鍵字。";
       if (liveFilter === "never") emptyHint = "目前沒有符合的尚未有Live版歌曲。";
-      else if (activeSort === "silent-3y") emptyHint = "目前沒有近三年未唱過的歌曲。";
-      else if (activeSort === "silent-5y") emptyHint = "目前沒有近五年未唱過的歌曲。";
+      else if (yearActive) emptyHint = `沒有最近演唱落在 ${yearFrom}–${yearTo} 的歌曲。`;
       grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
         <div class="big">找不到歌曲</div>
         <div>${emptyHint}</div>
@@ -451,6 +499,27 @@
     songSort = sortSelect.value || "shows-desc";
     render(searchInput.value);
   });
+
+  function onYearFromInput() {
+    yearFrom = Number(yearFromInput.value);
+    if (yearFrom > yearTo) {
+      yearTo = yearFrom;
+      yearToInput.value = String(yearTo);
+    }
+    render(searchInput.value);
+  }
+
+  function onYearToInput() {
+    yearTo = Number(yearToInput.value);
+    if (yearTo < yearFrom) {
+      yearFrom = yearTo;
+      yearFromInput.value = String(yearFrom);
+    }
+    render(searchInput.value);
+  }
+
+  yearFromInput?.addEventListener("input", onYearFromInput);
+  yearToInput?.addEventListener("input", onYearToInput);
 
   render("");
 

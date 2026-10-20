@@ -146,8 +146,126 @@ main{
 }
 
 .list-toolbar .filter-pills,
-.list-toolbar .song-sort{
+.list-toolbar .song-controls{
   flex:0 0 auto;
+}
+
+.song-controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 14px;
+  align-items:center;
+  flex:1 1 280px;
+  min-width:0;
+}
+
+.song-controls[hidden]{
+  display:none;
+}
+
+.year-range{
+  flex:1 1 200px;
+  min-width:180px;
+  max-width:340px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:8px 14px 10px;
+  box-shadow:var(--shadow);
+}
+
+.year-range-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:2px;
+}
+
+.year-range-title{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.04em;
+  color:var(--text-muted);
+}
+
+.year-range-value{
+  font-size:13px;
+  font-weight:700;
+  color:var(--purple-700);
+  font-variant-numeric:tabular-nums;
+}
+
+.year-range-slider{
+  position:relative;
+  height:28px;
+}
+
+.year-range-rail,
+.year-range-fill{
+  position:absolute;
+  top:50%;
+  height:4px;
+  border-radius:999px;
+  transform:translateY(-50%);
+  pointer-events:none;
+}
+
+.year-range-rail{
+  left:0;
+  right:0;
+  background:var(--purple-150);
+}
+
+.year-range-fill{
+  background:var(--purple-700);
+}
+
+.year-range-input{
+  position:absolute;
+  left:0;
+  width:100%;
+  top:50%;
+  margin:0;
+  transform:translateY(-50%);
+  -webkit-appearance:none;
+  appearance:none;
+  background:transparent;
+  pointer-events:none;
+  height:28px;
+}
+
+.year-range-input::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  appearance:none;
+  pointer-events:auto;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--purple-700);
+  box-shadow:0 1px 3px rgba(80,40,90,.25);
+  cursor:grab;
+}
+
+.year-range-input::-webkit-slider-thumb:active{
+  cursor:grabbing;
+}
+
+.year-range-input::-moz-range-thumb{
+  pointer-events:auto;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--purple-700);
+  box-shadow:0 1px 3px rgba(80,40,90,.25);
+  cursor:grab;
+}
+
+.year-range-input::-moz-range-track{
+  background:transparent;
+  border:none;
 }
 
 .filter-pills{
