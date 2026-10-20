@@ -1,5 +1,5 @@
 {
-  "generated_note": "Generated from workbook via convert_xlsx_to_json.py; enriched from elaineyupei/my-live-chart (Traditional Chinese DT)",
+  "generated_note": "Generated from workbook via convert_xlsx_to_json.py; enriched from elaineyupei/my-live-chart (Traditional Chinese DT); LML setlists corrected; song versions merged; original_artist added",
   "songs": [
     {
       "song_id": "S001",
@@ -12,7 +12,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S002",
@@ -25,11 +26,12 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S003",
-      "title": "因為所以(畢氏定理)",
+      "title": "因為所以",
       "title_english": "",
       "album": "到此一遊 (1998)",
       "release_year": 1998,
@@ -38,7 +40,8 @@
       "arranger": "褚鎮東",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S004",
@@ -51,7 +54,8 @@
       "arranger": "鍾國仁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S005",
@@ -64,7 +68,8 @@
       "arranger": "黃丹儀",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S006",
@@ -77,7 +82,8 @@
       "arranger": "蔡德才@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S007",
@@ -90,7 +96,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S008",
@@ -103,7 +110,8 @@
       "arranger": "許惠琛",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S009",
@@ -116,7 +124,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S010",
@@ -129,7 +138,8 @@
       "arranger": "谷中仁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S011",
@@ -142,7 +152,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "陳慧琳"
     },
     {
       "song_id": "S012",
@@ -155,20 +166,22 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "陳慧琳"
     },
     {
       "song_id": "S013",
       "title": "新世紀福音戰士",
       "title_english": "",
-      "album": "冬天的故事 (1999)",
+      "album": "冬天的故事 (1999), Play It Loud Kiss Me Soft (2000)",
       "release_year": 1999,
       "lyricist": "黃偉文",
       "composer": "Johann Sebastian Bach + 陳輝陽",
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S014",
@@ -181,7 +194,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S015",
@@ -194,7 +208,8 @@
       "arranger": "C. Y. Kong + Alex San",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S016",
@@ -207,20 +222,22 @@
       "arranger": "亞賢細威",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S017",
       "title": "直覺",
       "title_english": "",
-      "album": "直覺 (1997)",
+      "album": "直覺 (1997), 私日記 (1997)",
       "release_year": 1997,
       "lyricist": "何秀萍",
       "composer": "陳小霞",
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S018",
@@ -233,7 +250,8 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S019",
@@ -246,7 +264,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "許冠傑"
     },
     {
       "song_id": "S020",
@@ -259,7 +278,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "崔萍"
     },
     {
       "song_id": "S021",
@@ -272,20 +292,22 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "譚詠麟"
     },
     {
       "song_id": "S022",
       "title": "再見二丁目",
       "title_english": "",
-      "album": "直覺 (1997)",
+      "album": "直覺 (1997), 私日記 (1997)",
       "release_year": 1997,
       "lyricist": "林夕",
       "composer": "于逸堯",
       "arranger": "谷中仁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S023",
@@ -298,7 +320,8 @@
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S024",
@@ -311,7 +334,8 @@
       "arranger": "孫偉明",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S025",
@@ -324,7 +348,8 @@
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S026",
@@ -337,7 +362,8 @@
       "arranger": "四方果+Slow Tech Riddim",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S027",
@@ -350,7 +376,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S028",
@@ -363,7 +390,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S029",
@@ -376,7 +404,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S030",
@@ -389,7 +418,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S031",
@@ -402,7 +432,8 @@
       "arranger": "周博賢/蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S032",
@@ -415,7 +446,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "黃耀明"
     },
     {
       "song_id": "S033",
@@ -428,7 +460,8 @@
       "arranger": "黃丹儀 and 舒文",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S034",
@@ -441,7 +474,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S035",
@@ -454,7 +488,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S036",
@@ -467,7 +502,8 @@
       "arranger": "于逸堯@人山人海/蔡德才@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S037",
@@ -480,7 +516,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S038",
@@ -493,7 +530,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S039",
@@ -506,7 +544,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S040",
@@ -519,7 +558,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S041",
@@ -532,7 +572,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S042",
@@ -545,7 +586,8 @@
       "arranger": "蔡德才@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S043",
@@ -558,7 +600,8 @@
       "arranger": "劉永堅",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S044",
@@ -571,7 +614,8 @@
       "arranger": "鍾成虎",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S045",
@@ -584,7 +628,8 @@
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S046",
@@ -597,7 +642,8 @@
       "arranger": "李端嫻",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S047",
@@ -610,7 +656,8 @@
       "arranger": "山本洋太",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S048",
@@ -623,7 +670,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S049",
@@ -636,7 +684,8 @@
       "arranger": "Barry Chung",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S050",
@@ -649,7 +698,8 @@
       "arranger": "方樹梁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S051",
@@ -662,7 +712,8 @@
       "arranger": "于逸堯@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S052",
@@ -675,7 +726,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "甄妮"
     },
     {
       "song_id": "S053",
@@ -688,7 +740,8 @@
       "arranger": "李端嫻/at17",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S054",
@@ -701,7 +754,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S055",
@@ -714,7 +768,8 @@
       "arranger": "黃丹儀 and 舒文",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S056",
@@ -727,7 +782,8 @@
       "arranger": "Ted Lo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S057",
@@ -740,7 +796,8 @@
       "arranger": "側田",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S058",
@@ -753,7 +810,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S059",
@@ -766,7 +824,8 @@
       "arranger": "劉祖德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S060",
@@ -779,7 +838,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S061",
@@ -792,7 +852,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S062",
@@ -805,7 +866,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S063",
@@ -818,20 +880,8 @@
       "arranger": "伍仲衡",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S064",
-      "title": "因為所以",
-      "title_english": "",
-      "album": "到此一遊 (1998)",
-      "release_year": 1998,
-      "lyricist": "林夕",
-      "composer": "陳小霞",
-      "arranger": "褚鎮東",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S065",
@@ -844,7 +894,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S066",
@@ -857,7 +908,8 @@
       "arranger": "陳奐仁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S067",
@@ -870,7 +922,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S068",
@@ -883,7 +936,8 @@
       "arranger": "Lara Nahum/ Edward Chan/ 黃兆銘@emp/ T-Ma@emp",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S069",
@@ -896,7 +950,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S070",
@@ -909,7 +964,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S071",
@@ -922,20 +978,22 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S072",
       "title": "E-714342",
       "title_english": "",
-      "album": "私日記 (1997)",
+      "album": "私日記 (1997), 體驗入學 (1998)",
       "release_year": 1997,
       "lyricist": "林夕",
       "composer": "于逸堯",
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S073",
@@ -948,7 +1006,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S074",
@@ -961,7 +1020,8 @@
       "arranger": "Ted Lo/雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S075",
@@ -974,7 +1034,8 @@
       "arranger": "Ted Lo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S076",
@@ -987,7 +1048,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S077",
@@ -1000,7 +1062,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S078",
@@ -1013,7 +1076,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S079",
@@ -1026,7 +1090,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S080",
@@ -1039,7 +1104,8 @@
       "arranger": "杜自持",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S081",
@@ -1052,7 +1118,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S082",
@@ -1065,7 +1132,8 @@
       "arranger": "張子堅",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S083",
@@ -1078,7 +1146,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S084",
@@ -1091,7 +1160,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S085",
@@ -1104,7 +1174,8 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S086",
@@ -1117,7 +1188,8 @@
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S087",
@@ -1130,7 +1202,8 @@
       "arranger": "Ted Lo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S088",
@@ -1143,7 +1216,8 @@
       "arranger": "Johnny Yim",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S089",
@@ -1156,7 +1230,8 @@
       "arranger": "盧凱彤/蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S090",
@@ -1169,7 +1244,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S091",
@@ -1182,7 +1258,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S092",
@@ -1195,7 +1272,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S093",
@@ -1208,7 +1286,8 @@
       "arranger": "Mac Chew",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S094",
@@ -1221,7 +1300,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S095",
@@ -1234,7 +1314,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": true,
-      "language": ""
+      "language": "",
+      "original_artist": "周杰倫"
     },
     {
       "song_id": "S096",
@@ -1247,7 +1328,8 @@
       "arranger": "孔奕佳",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S097",
@@ -1260,7 +1342,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S098",
@@ -1273,7 +1356,8 @@
       "arranger": "伍仲衡",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S099",
@@ -1286,7 +1370,8 @@
       "arranger": "Ted Lo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S100",
@@ -1299,7 +1384,8 @@
       "arranger": "伍樂城@RNLS",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S101",
@@ -1312,7 +1398,8 @@
       "arranger": "Erick Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S102",
@@ -1325,7 +1412,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S103",
@@ -1338,7 +1426,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S104",
@@ -1351,7 +1440,8 @@
       "arranger": "謝國維@Baron Pro",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S105",
@@ -1364,7 +1454,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S106",
@@ -1377,7 +1468,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S107",
@@ -1390,7 +1482,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S108",
@@ -1403,7 +1496,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S109",
@@ -1416,7 +1510,8 @@
       "arranger": "T-Ma",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S110",
@@ -1429,7 +1524,8 @@
       "arranger": "黃丹儀",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S111",
@@ -1442,7 +1538,8 @@
       "arranger": "谷中仁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S112",
@@ -1455,7 +1552,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S113",
@@ -1468,7 +1566,8 @@
       "arranger": "黃偉年",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S114",
@@ -1481,7 +1580,8 @@
       "arranger": "陳光榮",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S115",
@@ -1494,7 +1594,8 @@
       "arranger": "倫永亮",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S116",
@@ -1507,20 +1608,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S117",
-      "title": "狼來了 - Band Version",
-      "title_english": "",
-      "album": "狼來了 (1996)",
-      "release_year": 1996,
-      "lyricist": "馮正",
-      "composer": "馮正",
-      "arranger": "孫偉明",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S118",
@@ -1533,7 +1622,8 @@
       "arranger": "谷中仁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S119",
@@ -1546,7 +1636,8 @@
       "arranger": "方樹梁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S120",
@@ -1559,7 +1650,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S121",
@@ -1572,7 +1664,8 @@
       "arranger": "劉永堅",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S122",
@@ -1585,20 +1678,8 @@
       "arranger": "方樹梁",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S123",
-      "title": "直覺 (Easy Listening Mix)",
-      "title_english": "",
-      "album": "直覺 (1997)",
-      "release_year": 1997,
-      "lyricist": "何秀萍",
-      "composer": "陳小霞",
-      "arranger": "蔡德才",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S124",
@@ -1611,20 +1692,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S125",
-      "title": "再見二丁目 - 寰宇風情Mix",
-      "title_english": "",
-      "album": "私日記 (1997)",
-      "release_year": 1997,
-      "lyricist": "林夕",
-      "composer": "于逸堯",
-      "arranger": "谷中仁",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S126",
@@ -1637,33 +1706,8 @@
       "arranger": "李端嫻",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S127",
-      "title": "直覺 - Ylk Org. Mix",
-      "title_english": "",
-      "album": "私日記 (1997)",
-      "release_year": 1997,
-      "lyricist": "何秀萍",
-      "composer": "陳小霞",
-      "arranger": "蔡德才",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S128",
-      "title": "手信 - Mo' Music Mix",
-      "title_english": "",
-      "album": "私日記 (1997)",
-      "release_year": 1997,
-      "lyricist": "林夕",
-      "composer": "于逸堯",
-      "arranger": "梁基爵",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S129",
@@ -1676,7 +1720,8 @@
       "arranger": "李端嫻",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S130",
@@ -1689,7 +1734,8 @@
       "arranger": "Billy Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S131",
@@ -1702,7 +1748,8 @@
       "arranger": "Billy Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S132",
@@ -1715,7 +1762,8 @@
       "arranger": "許惠琛/蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S133",
@@ -1728,7 +1776,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S134",
@@ -1741,7 +1790,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S135",
@@ -1754,7 +1804,8 @@
       "arranger": "林慕德/Jason Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S136",
@@ -1767,20 +1818,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S137",
-      "title": "E-714342 - La La La Version",
-      "title_english": "",
-      "album": "體驗入學 (1998)",
-      "release_year": 1998,
-      "lyricist": "林夕",
-      "composer": "于逸堯",
-      "arranger": "于逸堯",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S138",
@@ -1793,7 +1832,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S139",
@@ -1806,7 +1846,8 @@
       "arranger": "林子揚",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S140",
@@ -1819,7 +1860,8 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S141",
@@ -1832,7 +1874,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S142",
@@ -1845,7 +1888,8 @@
       "arranger": "陳輝陽",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S143",
@@ -1858,7 +1902,8 @@
       "arranger": "許惠琛",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S144",
@@ -1871,7 +1916,8 @@
       "arranger": "許惠琛",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S145",
@@ -1884,7 +1930,8 @@
       "arranger": "鄭中基",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S146",
@@ -1897,7 +1944,8 @@
       "arranger": "陳詠欣",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S147",
@@ -1910,7 +1958,8 @@
       "arranger": "吳慶隆",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S148",
@@ -1923,7 +1972,8 @@
       "arranger": "王繼康",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S149",
@@ -1936,7 +1986,8 @@
       "arranger": "梁伯君",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S150",
@@ -1949,7 +2000,8 @@
       "arranger": "袁述中/黃韻玲",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S151",
@@ -1962,7 +2014,8 @@
       "arranger": "Aubrey Suwito",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S152",
@@ -1975,7 +2028,8 @@
       "arranger": "Terence Teo",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S153",
@@ -1988,7 +2042,8 @@
       "arranger": "黃韻玲",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S154",
@@ -2001,7 +2056,8 @@
       "arranger": "江建民",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S155",
@@ -2014,7 +2070,8 @@
       "arranger": "江建民",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S156",
@@ -2027,7 +2084,8 @@
       "arranger": "RAMLI",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S157",
@@ -2040,7 +2098,8 @@
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S158",
@@ -2053,7 +2112,8 @@
       "arranger": "亞里安@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S159",
@@ -2066,7 +2126,8 @@
       "arranger": "蔡德才@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S160",
@@ -2079,7 +2140,8 @@
       "arranger": "亞里安@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S161",
@@ -2092,7 +2154,8 @@
       "arranger": "周博賢",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S162",
@@ -2105,7 +2168,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S163",
@@ -2118,7 +2182,8 @@
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S164",
@@ -2131,7 +2196,8 @@
       "arranger": "周博賢",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S165",
@@ -2144,7 +2210,8 @@
       "arranger": "黃丹儀/舒文",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S166",
@@ -2157,7 +2224,8 @@
       "arranger": "陳輝陽@好好笑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S167",
@@ -2170,7 +2238,8 @@
       "arranger": "山本洋太",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S168",
@@ -2183,33 +2252,8 @@
       "arranger": "Slow Tech Riddim",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S169",
-      "title": "放煙花 - Mass Production Mix",
-      "title_english": "",
-      "album": "Play It Loud, Kiss Me Soft (2000)",
-      "release_year": 2000,
-      "lyricist": "林夕",
-      "composer": "四方果",
-      "arranger": "四方果/Slow Tech Riddim",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S170",
-      "title": "新世紀福音戰士 - Air Max Mix",
-      "title_english": "",
-      "album": "Play It Loud Kiss Me Soft (2000)",
-      "release_year": 2000,
-      "lyricist": "黃偉文",
-      "composer": "陳輝陽/Johann Sebastian Bach",
-      "arranger": "陳輝陽@好好笑",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S171",
@@ -2222,7 +2266,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S172",
@@ -2235,7 +2280,8 @@
       "arranger": "杜自持",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S173",
@@ -2248,7 +2294,8 @@
       "arranger": "四方果",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S174",
@@ -2261,7 +2308,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S175",
@@ -2274,7 +2322,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S176",
@@ -2287,7 +2336,8 @@
       "arranger": "于逸堯",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S177",
@@ -2300,7 +2350,8 @@
       "arranger": "蔡德才@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S178",
@@ -2313,20 +2364,8 @@
       "arranger": "梁翹柏",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S179",
-      "title": "楊千嬅（再生版）",
-      "title_english": "",
-      "album": "M Vs M上半場 (2002)",
-      "release_year": 2002,
-      "lyricist": "林夕",
-      "composer": "Eric Kwok",
-      "arranger": "Erick Kwok",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S180",
@@ -2339,7 +2378,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S181",
@@ -2352,7 +2392,8 @@
       "arranger": "梁翹柏",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S182",
@@ -2365,7 +2406,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S183",
@@ -2378,7 +2420,8 @@
       "arranger": "徐千秀",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S184",
@@ -2391,7 +2434,8 @@
       "arranger": "Barry Chung",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S185",
@@ -2404,7 +2448,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S186",
@@ -2417,7 +2462,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S187",
@@ -2430,7 +2476,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S188",
@@ -2443,7 +2490,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S189",
@@ -2456,7 +2504,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S190",
@@ -2469,7 +2518,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S191",
@@ -2482,7 +2532,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S192",
@@ -2495,7 +2546,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S193",
@@ -2508,7 +2560,8 @@
       "arranger": "于逸堯@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S194",
@@ -2521,7 +2574,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S195",
@@ -2534,7 +2588,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S196",
@@ -2547,7 +2602,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S197",
@@ -2560,7 +2616,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S198",
@@ -2573,7 +2630,8 @@
       "arranger": "梁翹柏 and 三寶",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S199",
@@ -2586,7 +2644,8 @@
       "arranger": "于逸堯 and 蔡德才@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S200",
@@ -2599,7 +2658,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S201",
@@ -2612,7 +2672,8 @@
       "arranger": "Cha Ho Young",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S202",
@@ -2625,7 +2686,8 @@
       "arranger": "Cha Ho Young",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S203",
@@ -2638,7 +2700,8 @@
       "arranger": "Martin Tang",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S204",
@@ -2651,7 +2714,8 @@
       "arranger": "黃中嶽",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S205",
@@ -2664,7 +2728,8 @@
       "arranger": "木蘭號AKA陳韋伶",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S206",
@@ -2677,7 +2742,8 @@
       "arranger": "林于賢",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S207",
@@ -2690,7 +2756,8 @@
       "arranger": "Terence Teo",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S208",
@@ -2703,7 +2770,8 @@
       "arranger": "吳慶隆",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S209",
@@ -2716,7 +2784,8 @@
       "arranger": "Terence Teo",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S210",
@@ -2729,7 +2798,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S211",
@@ -2742,7 +2812,8 @@
       "arranger": "李端嫻",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S212",
@@ -2755,7 +2826,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S213",
@@ -2768,7 +2840,8 @@
       "arranger": "梁翹柏",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S214",
@@ -2781,7 +2854,8 @@
       "arranger": "四方果/蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S215",
@@ -2794,7 +2868,8 @@
       "arranger": "假音人",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S216",
@@ -2807,7 +2882,8 @@
       "arranger": "Cha Ho-Young",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S217",
@@ -2820,7 +2896,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S218",
@@ -2833,11 +2910,12 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S219",
-      "title": "花好月圓夜 - 廣東版",
+      "title": "花好月圓夜",
       "title_english": "",
       "album": "2004 開大 (2004)",
       "release_year": 2004,
@@ -2846,7 +2924,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S220",
@@ -2859,20 +2938,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S221",
-      "title": "花好月圓夜 - 國語版",
-      "title_english": "",
-      "album": "2004 開大 (2004)",
-      "release_year": 2004,
-      "lyricist": "任賢齊",
-      "composer": "任賢齊",
-      "arranger": "伍樂城",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S222",
@@ -2885,7 +2952,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S223",
@@ -2898,7 +2966,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S224",
@@ -2911,7 +2980,8 @@
       "arranger": "何山@Pixel Toy",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S225",
@@ -2924,7 +2994,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S226",
@@ -2937,7 +3008,8 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S227",
@@ -2950,7 +3022,8 @@
       "arranger": "梁基爵",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S228",
@@ -2963,7 +3036,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S229",
@@ -2976,7 +3050,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S230",
@@ -2989,7 +3064,8 @@
       "arranger": "Ted Lo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S231",
@@ -3002,7 +3078,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S232",
@@ -3015,7 +3092,8 @@
       "arranger": "何山",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S233",
@@ -3028,7 +3106,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S234",
@@ -3041,20 +3120,8 @@
       "arranger": "梁基爵@人山人海",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
-    },
-    {
-      "song_id": "S235",
-      "title": "長信不如短訊 - 長痛不如短痛",
-      "title_english": "",
-      "album": "Single (2005)",
-      "release_year": 2005,
-      "lyricist": "林夕",
-      "composer": "Jean Chien",
-      "arranger": "Ted Lo",
-      "notes": "",
-      "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S236",
@@ -3067,7 +3134,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S237",
@@ -3080,7 +3148,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S238",
@@ -3093,7 +3162,8 @@
       "arranger": "王大夫/時金宇",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S239",
@@ -3106,7 +3176,8 @@
       "arranger": "周國賢",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S240",
@@ -3119,7 +3190,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S241",
@@ -3132,7 +3204,8 @@
       "arranger": "C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S242",
@@ -3145,7 +3218,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S243",
@@ -3158,7 +3232,8 @@
       "arranger": "Ted Lo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S244",
@@ -3171,7 +3246,8 @@
       "arranger": "鍾興民",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S245",
@@ -3184,7 +3260,8 @@
       "arranger": "蔡德才",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S246",
@@ -3197,7 +3274,8 @@
       "arranger": "謝國維@Baron Pro",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S247",
@@ -3210,7 +3288,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S248",
@@ -3223,7 +3302,8 @@
       "arranger": "陳台證",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S249",
@@ -3236,7 +3316,8 @@
       "arranger": "Adam Lee",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S250",
@@ -3249,7 +3330,8 @@
       "arranger": "黃思彥@Baron Pro",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S251",
@@ -3262,7 +3344,8 @@
       "arranger": "謝國維@Baron Pro",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S252",
@@ -3275,7 +3358,8 @@
       "arranger": "藝琛",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S253",
@@ -3288,7 +3372,8 @@
       "arranger": "陳台證",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S254",
@@ -3301,7 +3386,8 @@
       "arranger": "伍樂城@Baron Pro",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S255",
@@ -3314,7 +3400,8 @@
       "arranger": "黃丹儀@Baron Pro",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S256",
@@ -3327,7 +3414,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S257",
@@ -3340,7 +3428,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S258",
@@ -3353,7 +3442,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S259",
@@ -3366,7 +3456,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S260",
@@ -3379,7 +3470,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S261",
@@ -3392,7 +3484,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S262",
@@ -3405,7 +3498,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S263",
@@ -3418,7 +3512,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S264",
@@ -3431,7 +3526,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S265",
@@ -3444,7 +3540,8 @@
       "arranger": "Tomoki Ookame",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S266",
@@ -3457,7 +3554,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S267",
@@ -3470,7 +3568,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S268",
@@ -3483,7 +3582,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S269",
@@ -3496,7 +3596,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S270",
@@ -3509,7 +3610,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S271",
@@ -3522,7 +3624,8 @@
       "arranger": "側田",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S272",
@@ -3535,7 +3638,8 @@
       "arranger": "Adrian Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S273",
@@ -3548,7 +3652,8 @@
       "arranger": "陳台證",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S274",
@@ -3561,7 +3666,8 @@
       "arranger": "古馳",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S275",
@@ -3574,7 +3680,8 @@
       "arranger": "David Kang",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S276",
@@ -3587,7 +3694,8 @@
       "arranger": "Edward Chan/Man Keung/Mica",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S277",
@@ -3600,7 +3708,8 @@
       "arranger": "Terence Teo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S278",
@@ -3613,7 +3722,8 @@
       "arranger": "黃思彥",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S279",
@@ -3626,7 +3736,8 @@
       "arranger": "Adrian Chan@sense",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S280",
@@ -3639,7 +3750,8 @@
       "arranger": "Man Keung/Mica/Edward Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S281",
@@ -3652,7 +3764,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S282",
@@ -3665,7 +3778,8 @@
       "arranger": "Tim Ngoh",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S283",
@@ -3678,7 +3792,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S284",
@@ -3691,7 +3806,8 @@
       "arranger": "Tim Ngoh",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S285",
@@ -3704,7 +3820,8 @@
       "arranger": "藝琛",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S286",
@@ -3717,7 +3834,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S287",
@@ -3730,7 +3848,8 @@
       "arranger": "陳台證",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S288",
@@ -3743,7 +3862,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S289",
@@ -3756,7 +3876,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S290",
@@ -3769,7 +3890,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S291",
@@ -3782,7 +3904,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S292",
@@ -3795,7 +3918,8 @@
       "arranger": "褚鎮東",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S293",
@@ -3808,7 +3932,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S294",
@@ -3821,7 +3946,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S295",
@@ -3834,7 +3960,8 @@
       "arranger": "Edward Chan/Randy Chow",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S296",
@@ -3847,7 +3974,8 @@
       "arranger": "Johnny Yim",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S297",
@@ -3860,7 +3988,8 @@
       "arranger": "陳台證/符傳義@imagines",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S298",
@@ -3873,7 +4002,8 @@
       "arranger": "Marting Tang",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S299",
@@ -3886,7 +4016,8 @@
       "arranger": "Terence Teo",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S300",
@@ -3899,7 +4030,8 @@
       "arranger": "梁翹柏",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S301",
@@ -3912,7 +4044,8 @@
       "arranger": "劉志遠",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S302",
@@ -3925,7 +4058,8 @@
       "arranger": "劉志遠",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S303",
@@ -3938,7 +4072,8 @@
       "arranger": "黃韻仁",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S304",
@@ -3951,7 +4086,8 @@
       "arranger": "Johnny Yim",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S306",
@@ -3964,7 +4100,8 @@
       "arranger": "藍奕邦/James Ting",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S307",
@@ -3977,7 +4114,8 @@
       "arranger": "朱俊傑",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S308",
@@ -3990,7 +4128,8 @@
       "arranger": "Edward Chan/Randy Chow/黃兆銘",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S309",
@@ -4003,7 +4142,8 @@
       "arranger": "藍奕邦/丁偉斌",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S310",
@@ -4016,7 +4156,8 @@
       "arranger": "孔奕佳",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S311",
@@ -4029,7 +4170,8 @@
       "arranger": "張峽浩",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S312",
@@ -4042,7 +4184,8 @@
       "arranger": "鄧智偉",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S313",
@@ -4055,7 +4198,8 @@
       "arranger": "Fergus Chow/何秉舜@GoomusIc",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S314",
@@ -4068,7 +4212,8 @@
       "arranger": "張子堅",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S315",
@@ -4081,7 +4226,8 @@
       "arranger": "雷頌德",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S316",
@@ -4094,7 +4240,8 @@
       "arranger": "Billy Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S317",
@@ -4107,7 +4254,8 @@
       "arranger": "思歪江 C.Y.Kong",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S318",
@@ -4120,7 +4268,8 @@
       "arranger": "周錫漢",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S319",
@@ -4133,7 +4282,8 @@
       "arranger": "黃思彥",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S320",
@@ -4146,7 +4296,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S321",
@@ -4159,7 +4310,8 @@
       "arranger": "周錫漢",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S322",
@@ -4172,7 +4324,8 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S323",
@@ -4185,7 +4338,8 @@
       "arranger": "陳光榮",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S324",
@@ -4198,7 +4352,8 @@
       "arranger": "黃兆銘/周錫漢",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S325",
@@ -4211,7 +4366,8 @@
       "arranger": "黃艾倫/翁瑋盈",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S326",
@@ -4224,7 +4380,8 @@
       "arranger": "張家誠",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S327",
@@ -4237,7 +4394,8 @@
       "arranger": "周錫漢/黃兆銘",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S328",
@@ -4250,7 +4408,8 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S329",
@@ -4263,7 +4422,8 @@
       "arranger": "Edward Chiu",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S331",
@@ -4276,7 +4436,8 @@
       "arranger": "張家誠",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S332",
@@ -4289,7 +4450,8 @@
       "arranger": "王雙駿",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S333",
@@ -4302,7 +4464,8 @@
       "arranger": "小莫",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S334",
@@ -4315,7 +4478,8 @@
       "arranger": "何天成",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S335",
@@ -4328,7 +4492,8 @@
       "arranger": "範梓謙",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S336",
@@ -4341,7 +4506,8 @@
       "arranger": "範梓謙",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S337",
@@ -4354,7 +4520,8 @@
       "arranger": "波多野裕介",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S338",
@@ -4367,7 +4534,8 @@
       "arranger": "周富堅",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S339",
@@ -4380,7 +4548,8 @@
       "arranger": "張子堅",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S340",
@@ -4393,7 +4562,8 @@
       "arranger": "小冷",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S341",
@@ -4406,7 +4576,8 @@
       "arranger": "楊穎彪/劉胡軼",
       "notes": "",
       "is_other_artist": false,
-      "language": "國語"
+      "language": "國語",
+      "original_artist": ""
     },
     {
       "song_id": "S342",
@@ -4419,7 +4590,8 @@
       "arranger": "伍樂城@RNLS",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S343",
@@ -4432,7 +4604,8 @@
       "arranger": "Justin Yau",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S344",
@@ -4445,7 +4618,8 @@
       "arranger": "Terry Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S345",
@@ -4458,7 +4632,8 @@
       "arranger": "褚鎮東",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S346",
@@ -4471,7 +4646,8 @@
       "arranger": "Billy Chan",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S347",
@@ -4484,7 +4660,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S348",
@@ -4497,7 +4674,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S349",
@@ -4510,7 +4688,8 @@
       "arranger": "Patrick Yip",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S350",
@@ -4523,7 +4702,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S351",
@@ -4536,7 +4716,8 @@
       "arranger": "楊聲錚",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S352",
@@ -4549,7 +4730,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S353",
@@ -4562,7 +4744,8 @@
       "arranger": "Eric Kwok",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S354",
@@ -4575,7 +4758,8 @@
       "arranger": "Ted Lo",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S355",
@@ -4588,7 +4772,8 @@
       "arranger": "英師傅",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S356",
@@ -4601,7 +4786,8 @@
       "arranger": "",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S357",
@@ -4614,7 +4800,8 @@
       "arranger": "伍樂城",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S358",
@@ -4627,7 +4814,8 @@
       "arranger": "思歪江",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     },
     {
       "song_id": "S359",
@@ -4640,7 +4828,8 @@
       "arranger": "陳匡榮",
       "notes": "",
       "is_other_artist": false,
-      "language": ""
+      "language": "",
+      "original_artist": ""
     }
   ],
   "concerts": [
@@ -6273,19 +6462,7 @@
       "notes": ""
     },
     {
-      "song_id": "S019",
-      "session_id": "C001-1",
-      "is_main_rundown": false,
-      "notes": "Encore，表演螢光棒雙截棍"
-    },
-    {
       "song_id": "S031",
-      "session_id": "C001-1",
-      "is_main_rundown": false,
-      "notes": "Encore"
-    },
-    {
-      "song_id": "S023",
       "session_id": "C001-1",
       "is_main_rundown": false,
       "notes": "Encore"
@@ -7503,43 +7680,43 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C003-1",
       "is_main_rundown": true,
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C003-2",
       "is_main_rundown": true,
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C003-3",
       "is_main_rundown": true,
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C003-4",
       "is_main_rundown": true,
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C003-5",
       "is_main_rundown": true,
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C003-6",
       "is_main_rundown": true,
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C003-7",
       "is_main_rundown": true,
       "notes": ""
@@ -13035,12 +13212,6 @@
       "notes": ""
     },
     {
-      "song_id": "S083",
-      "session_id": "C007-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
       "song_id": "S022",
       "session_id": "C007-4",
       "is_main_rundown": true,
@@ -13095,1230 +13266,6 @@
       "notes": ""
     },
     {
-      "song_id": "S103",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S103",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S103",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S103",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S103",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S103",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S076",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S076",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S076",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S076",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S076",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S076",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S073",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S073",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S073",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S073",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S073",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S073",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S062",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S062",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S062",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S062",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S062",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S062",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S104",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S104",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S104",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S104",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S104",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S104",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S105",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S105",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S105",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S105",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S105",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S105",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S106",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S106",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S106",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S106",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S106",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S106",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S041",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S041",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S041",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S041",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S041",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S041",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S107",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S107",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S107",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S107",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S107",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S107",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S072",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S072",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S072",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S072",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S072",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S072",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S079",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S079",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S079",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S079",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S079",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S079",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S067",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S067",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S067",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S067",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S067",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S067",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S081",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S081",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S081",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S081",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S081",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S081",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S031",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S031",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S031",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S031",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S031",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S031",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S036",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S036",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S036",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S036",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S036",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S036",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S108",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S108",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S108",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S108",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S108",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S108",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S053",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S053",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S053",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S053",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S053",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S053",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S083",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S083",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S083",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S083",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S083",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S083",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S075",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S075",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S075",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S075",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S075",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S075",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S089",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S089",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S089",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S089",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S089",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S089",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S060",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S060",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S060",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S060",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S060",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S060",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S022",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S022",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S022",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S022",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S022",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S022",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S098",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S098",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S098",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S098",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S098",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S098",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S086",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S086",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S086",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S086",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S086",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S086",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S102",
-      "session_id": "C008-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S102",
-      "session_id": "C008-2",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S102",
-      "session_id": "C008-3",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S102",
-      "session_id": "C008-4",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S102",
-      "session_id": "C008-5",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S102",
-      "session_id": "C008-6",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S109",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": "演唱會主題曲"
-    },
-    {
-      "song_id": "S109",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": "演唱會主題曲"
-    },
-    {
-      "song_id": "S109",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": "演唱會主題曲"
-    },
-    {
-      "song_id": "S109",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": "演唱會主題曲"
-    },
-    {
-      "song_id": "S109",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": "演唱會主題曲"
-    },
-    {
-      "song_id": "S109",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": "演唱會主題曲"
-    },
-    {
-      "song_id": "S024",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S024",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S024",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S024",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S024",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S024",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S023",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S023",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S023",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S023",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S023",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S023",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S049",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S049",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S049",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S049",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S049",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S049",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S048",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S048",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S048",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S048",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S048",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S048",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S018",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S018",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S018",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S018",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S018",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S018",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S074",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S074",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S074",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S074",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S074",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S074",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S082",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S082",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S082",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S082",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S082",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S082",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S101",
-      "session_id": "C008-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S101",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S101",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S101",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S101",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S101",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
       "song_id": "S024",
       "session_id": "C009-1",
       "is_main_rundown": true,
@@ -14367,7 +13314,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C012-1",
       "is_main_rundown": true,
       "notes": ""
@@ -14463,7 +13410,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C012-2",
       "is_main_rundown": true,
       "notes": ""
@@ -14593,18 +13540,6 @@
       "session_id": "C013-1",
       "is_main_rundown": true,
       "notes": "演唱人:盧巧音；其他歌手/非原唱"
-    },
-    {
-      "song_id": "S064",
-      "session_id": "C001-1",
-      "is_main_rundown": true,
-      "notes": ""
-    },
-    {
-      "song_id": "S064",
-      "session_id": "C001-2",
-      "is_main_rundown": true,
-      "notes": ""
     },
     {
       "song_id": "S031",
@@ -15663,7 +14598,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C017-1",
       "is_main_rundown": true,
       "notes": ""
@@ -15717,7 +14652,7 @@
       "notes": ""
     },
     {
-      "song_id": "S221",
+      "song_id": "S219",
       "session_id": "C017-1",
       "is_main_rundown": true,
       "notes": "合唱:楊千嬅、任賢齊"
@@ -15825,7 +14760,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C017-2",
       "is_main_rundown": true,
       "notes": ""
@@ -15981,7 +14916,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C017-3",
       "is_main_rundown": true,
       "notes": ""
@@ -16137,7 +15072,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C017-4",
       "is_main_rundown": true,
       "notes": ""
@@ -16299,7 +15234,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C017-5",
       "is_main_rundown": true,
       "notes": ""
@@ -16731,7 +15666,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C022-1",
       "is_main_rundown": true,
       "notes": ""
@@ -16923,7 +15858,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C022-2",
       "is_main_rundown": true,
       "notes": ""
@@ -17115,7 +16050,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C022-3",
       "is_main_rundown": true,
       "notes": ""
@@ -17301,7 +16236,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C022-4",
       "is_main_rundown": true,
       "notes": ""
@@ -17493,7 +16428,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C022-5",
       "is_main_rundown": true,
       "notes": ""
@@ -19035,7 +17970,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C029-1",
       "is_main_rundown": true,
       "notes": ""
@@ -20193,7 +19128,7 @@
       "notes": ""
     },
     {
-      "song_id": "S221",
+      "song_id": "S219",
       "session_id": "C005-14",
       "is_main_rundown": true,
       "notes": ""
@@ -23997,7 +22932,7 @@
       "notes": ""
     },
     {
-      "song_id": "S221",
+      "song_id": "S219",
       "session_id": "C007-11",
       "is_main_rundown": false,
       "notes": "合唱:楊千嬅、任賢齊"
@@ -30507,7 +29442,7 @@
       "notes": ""
     },
     {
-      "song_id": "S064",
+      "song_id": "S003",
       "session_id": "C007-37",
       "is_main_rundown": false,
       "notes": ""
@@ -32939,150 +31874,6 @@
     {
       "song_id": "S094",
       "session_id": "C009-1",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S289",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S047",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S339",
-      "session_id": "C008-2",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S016",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S064",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S070",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S097",
-      "session_id": "C008-3",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S087",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S308",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S046",
-      "session_id": "C008-4",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S094",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S289",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S328",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S014",
-      "session_id": "C008-5",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S087",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S094",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S279",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S097",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S051",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S177",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S178",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S047",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S016",
-      "session_id": "C008-6",
-      "is_main_rundown": false,
-      "notes": ""
-    },
-    {
-      "song_id": "S014",
-      "session_id": "C008-6",
       "is_main_rundown": false,
       "notes": ""
     },
@@ -35771,6 +34562,1284 @@
     {
       "song_id": "S103",
       "session_id": "C032-12",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S103",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S076",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S073",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S062",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S104",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S105",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S106",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S041",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S107",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S072",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S079",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S067",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S081",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S031",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S036",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S108",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S053",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S083",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S075",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S089",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S060",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S022",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S098",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S086",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S102",
+      "session_id": "C008-1",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S109",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": "演唱會主題曲"
+    },
+    {
+      "song_id": "S049",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S024",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S023",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S048",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S018",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S074",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S082",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S101",
+      "session_id": "C008-1",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S103",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S076",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S073",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S062",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S104",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S105",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S106",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S041",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S107",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S072",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S079",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S067",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S081",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S031",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S036",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S108",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S053",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S083",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S075",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S089",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S060",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S022",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S098",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S086",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S102",
+      "session_id": "C008-2",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S109",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": "演唱會主題曲"
+    },
+    {
+      "song_id": "S049",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S289",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S048",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S023",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S074",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S047",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S339",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S082",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S101",
+      "session_id": "C008-2",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S103",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S076",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S073",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S062",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S104",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S105",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S106",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S041",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S107",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S072",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S079",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S067",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S081",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S031",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S036",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S108",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S053",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S083",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S075",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S089",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S060",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S022",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S098",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S086",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S102",
+      "session_id": "C008-3",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S109",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": "演唱會主題曲"
+    },
+    {
+      "song_id": "S016",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S023",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S049",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S003",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S070",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S097",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S082",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S101",
+      "session_id": "C008-3",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S103",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S076",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S073",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S062",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S104",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S105",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S106",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S041",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S107",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S072",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S079",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S067",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S081",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S031",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S036",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S108",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S053",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S083",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S075",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S089",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S060",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S022",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S098",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S086",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S102",
+      "session_id": "C008-4",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S109",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": "演唱會主題曲"
+    },
+    {
+      "song_id": "S087",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S049",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S023",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S308",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S018",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S046",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S082",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S101",
+      "session_id": "C008-4",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S103",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S076",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S073",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S062",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S104",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S105",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S106",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S041",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S107",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S072",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S079",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S067",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S081",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S031",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S036",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S108",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S053",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S083",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S075",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S089",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S060",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S022",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S098",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S086",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S102",
+      "session_id": "C008-5",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S109",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": "演唱會主題曲"
+    },
+    {
+      "song_id": "S094",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S049",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S074",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S289",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S328",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S014",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S082",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S101",
+      "session_id": "C008-5",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S103",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S076",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S073",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S062",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S104",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S105",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S106",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S041",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S107",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S072",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S079",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S067",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S081",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S031",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S036",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S108",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S053",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S083",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S075",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S089",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S060",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S022",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S098",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S086",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S102",
+      "session_id": "C008-6",
+      "is_main_rundown": true,
+      "notes": ""
+    },
+    {
+      "song_id": "S109",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": "演唱會主題曲"
+    },
+    {
+      "song_id": "S087",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S049",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S048",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S023",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S074",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S094",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S279",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S097",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S051",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S177",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S178",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S047",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S082",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S101",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S016",
+      "session_id": "C008-6",
+      "is_main_rundown": false,
+      "notes": ""
+    },
+    {
+      "song_id": "S014",
+      "session_id": "C008-6",
       "is_main_rundown": false,
       "notes": ""
     }

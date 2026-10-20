@@ -39,6 +39,13 @@
     return `<span class="perf-label">（${escapeHtml(n)}）</span>`;
   }
 
+  function originalTagHTML(song) {
+    if (!DataLayer.isOtherArtist(song)) return "";
+    const name = DataLayer.originalArtist(song);
+    if (!name) return '<span class="tag-other">原唱：未知</span>';
+    return `<span class="tag-other">原唱：${escapeHtml(name)}</span>`;
+  }
+
   function ticketHTML(entry) {
     const keys = entry.sessions.map((s) => DataLayer.locationKey(s));
     const sharedLoc =
@@ -59,11 +66,7 @@
         const items = byYear[year]
           .map((s) => {
             const loc = sharedLoc ? "" : ` ${DataLayer.formatLocation(s)}`;
-            const encoreTag =
-              s.is_main_rundown === false
-                ? '<span class="tag-encore">Encore</span>'
-                : "";
-            return `<span class="ticket-chip"><span class="date">${shortDate(s.date)}</span>${loc}${encoreTag}</span>`;
+            return `<span class="ticket-chip"><span class="date">${shortDate(s.date)}</span>${loc}</span>`;
           })
           .join("");
         return `<div class="ticket-year-block">
@@ -225,9 +228,7 @@
     modalList.innerHTML = items
       .map((p, i) => {
         const title = p.song?.title || p.song_id;
-        const other = DataLayer.isOtherArtist(p.song)
-          ? '<span class="tag-other">其他歌手</span>'
-          : "";
+        const other = originalTagHTML(p.song);
         const encore =
           p.is_main_rundown === false
             ? '<span class="tag-encore">Encore</span>'
@@ -292,7 +293,7 @@
           const other = s.is_other_artist;
           const never = !other && !DataLayer.hasBeenPerformed(s.song_id);
           const tags = [
-            other ? '<span class="tag-other">其他歌手</span>' : "",
+            other ? originalTagHTML(s) : "",
             never ? '<span class="tag-never">尚未有Live版</span>' : "",
           ].join("");
           if (other) {

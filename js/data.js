@@ -159,12 +159,175 @@ const DataLayer = (() => {
     return !!(song && song.is_other_artist);
   }
 
+  function originalArtist(songOrId) {
+    const song =
+      typeof songOrId === "string" ? songsById[songOrId] : songOrId;
+    return (song && song.original_artist) || "";
+  }
+
   function getConcert(concertId) {
     return concertsById[concertId] || null;
   }
 
   function getSong(songId) {
     return songsById[songId] || null;
+  }
+
+  function allConcerts() {
+    return raw.concerts;
+  }
+
+  function allPerformances() {
+    return raw.performances;
+  }
+
+  function allSessions() {
+    return Object.values(sessionsById);
+  }
+
+  function isPersonalConcert(concert) {
+    const name = concert.concert_name || "";
+    // Guest / multi-artist / radio specials — not solo ticketed tours
+    if (/拉闊|六神合體|MOOV Live|ID CLUB|狂熱份子|又一個叱吒/i.test(name)) return false;
+    return true;
+  }
+
+  /** Stats for Fun Facts page */
+  function funFacts() {
+    const sessions = allSessions();
+    const latest = sessions.reduce((max, s) => (!max || s.date > max ? s.date : max), null);
+    const asOf = latest ? latest.slice(0, 7) : ""; // YYYY-MM
+
+    const totalShows = sessions.length;
+    const personalShows = sessions.filter((s) => {
+      const c = concertsById[s.concert_id];
+      return c && isPersonalConcert(c);
+    }).length;
+
+    // song count per session
+    const perSession = {};
+    raw.performances.forEach((p) => {
+      perSession[p.session_id] = (perSession[p.session_id] || 0) + 1;
+    });
+    const sessionRows = sessions
+      .map((s) => ({
+        session: s,
+        concert: concertsById[s.concert_id],
+        count: perSession[s.session_id] || 0,
+      }))
+      .filter((r) => r.count > 0 && r.concert && isPersonalConcert(r.concert))
+      .sort((a, b) => b.count - a.count || (a.session.date < b.session.date ? 1 : -1));
+    const topSongCountShows = sessionRows.slice(0, 3);
+
+    // top 10 songs by performance times
+    const songCounts = {};
+    raw.performances.forEach((p) => {
+      songCounts[p.song_id] = (songCounts[p.song_id] || 0) + 1;
+    });
+    const topSongs = Object.entries(songCounts)
+      .map(([song_id, times]) => ({
+        song: songsById[song_id],
+        times,
+      }))
+      .filter((x) => x.song && !x.song.is_other_artist)
+      .sort((a, b) => b.times - a.times || a.song.title.localeCompare(b.song.title, "zh-Hant"))
+      .slice(0, 10);
+
+    // top 5 cities
+    const cityCounts = {};
+    sessions.forEach((s) => {
+      const city = s.city || "未知";
+      cityCounts[city] = (cityCounts[city] || 0) + 1;
+    });
+    const topCities = Object.entries(cityCounts)
+      .map(([city, times]) => ({ city, times }))
+      .sort((a, b) => b.times - a.times || a.city.localeCompare(b.city, "zh-Hant"))
+      .slice(0, 5);
+
+    // encore king
+    const encoreCounts = {};
+    const encoreSessions = {};
+    raw.performances.forEach((p) => {
+      if (p.is_main_rundown !== false) return;
+      encoreCounts[p.song_id] = (encoreCounts[p.song_id] || 0) + 1;
+      if (!encoreSessions[p.song_id]) encoreSessions[p.song_id] = [];
+      encoreSessions[p.song_id].push(p.session_id);
+    });
+    let encoreKing = null;
+    Object.entries(encoreCounts).forEach(([song_id, times]) => {
+      const song = songsById[song_id];
+      if (!song || song.is_other_artist) return;
+      if (!encoreKing || times > encoreKing.times) {
+        const sessDetails = (encoreSessions[song_id] || [])
+          .map((sid) => {
+            const sess = sessionsById[sid];
+            const c = sess ? concertsById[sess.concert_id] : null;
+            return sess && c
+              ? {
+                  date: sess.date,
+                  city: sess.city,
+                  concert_name: c.concert_name,
+                  session_id: sid,
+                }
+              : null;
+          })
+          .filter(Boolean)
+          .sort((a, b) => (a.date < b.date ? 1 : -1));
+        encoreKing = { song, times, sessions: sessDetails };
+      }
+    });
+
+    // songs that started in Minor Classics / B minor, later became main rundown elsewhere
+    const minorConcertIds = new Set(
+      raw.concerts
+        .filter((c) => /Minor Classics|B minor/i.test(c.concert_name))
+        .map((c) => c.concert_id)
+    );
+    const firstDate = {};
+    const firstConcert = {};
+    raw.performances.forEach((p) => {
+      const sess = sessionsById[p.session_id];
+      if (!sess) return;
+      const prev = firstDate[p.song_id];
+      if (!prev || sess.date < prev) {
+        firstDate[p.song_id] = sess.date;
+        firstConcert[p.song_id] = sess.concert_id;
+      }
+    });
+    const minorThenMain = [];
+    Object.keys(firstConcert).forEach((song_id) => {
+      const song = songsById[song_id];
+      if (!song || song.is_other_artist) return;
+      if (!minorConcertIds.has(firstConcert[song_id])) return;
+      const laterMain = raw.performances.some((p) => {
+        if (p.song_id !== song_id || p.is_main_rundown === false) return false;
+        const sess = sessionsById[p.session_id];
+        if (!sess) return false;
+        return !minorConcertIds.has(sess.concert_id);
+      });
+      if (laterMain) {
+        const origin = concertsById[firstConcert[song_id]];
+        minorThenMain.push({
+          song,
+          first_date: firstDate[song_id],
+          first_concert: origin?.concert_name || firstConcert[song_id],
+        });
+      }
+    });
+    minorThenMain.sort((a, b) =>
+      a.first_date < b.first_date ? -1 : a.first_date > b.first_date ? 1 : a.song.title.localeCompare(b.song.title, "zh-Hant")
+    );
+
+    return {
+      asOf,
+      totalShows,
+      personalShows,
+      topSongCountShows,
+      topSongs,
+      topCities,
+      encoreKing,
+      minorThenMain,
+    };
   }
 
   function songsInAlbum(albumName) {
@@ -199,6 +362,7 @@ const DataLayer = (() => {
     allSongs,
     ownSongs,
     isOtherArtist,
+    originalArtist,
     formatLocation,
     locationKey,
     stripAlbumYear,
@@ -206,6 +370,10 @@ const DataLayer = (() => {
     songsInAlbum,
     getConcert,
     getSong,
+    allConcerts,
+    allPerformances,
+    allSessions,
+    funFacts,
     setlistForSession,
     sessionsForConcert,
   };
