@@ -1,5 +1,5 @@
 #!/bin/bash
-# Push this project to https://github.com/anchun0409/miriam-live
+# Push this project to https://github.com/anchun0409/miriam-archive
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -12,11 +12,11 @@ if [[ ! -d "$GIT_DIR" ]]; then
 fi
 
 # Prefer SSH; fall back to HTTPS if SSH fails
-git remote set-url origin git@github.com:anchun0409/miriam-live.git
-echo "Pushing to github.com/anchun0409/miriam-live (SSH)..."
+git remote set-url origin git@github.com:anchun0409/miriam-archive.git
+echo "Pushing to github.com/anchun0409/miriam-archive (SSH)..."
 if ! git push -u origin main; then
   echo "SSH failed — trying HTTPS (GitHub will prompt for login/token)..."
-  git remote set-url origin https://github.com/anchun0409/miriam-live.git
+  git remote set-url origin https://github.com/anchun0409/miriam-archive.git
   git push -u origin main
 fi
 
@@ -25,4 +25,4 @@ echo "Done."
 git log -1 --oneline
 git status
 echo
-echo "Repo: https://github.com/anchun0409/miriam-live"
+echo "Repo: https://github.com/anchun0409/miriam-archive"

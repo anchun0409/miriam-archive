@@ -2,7 +2,7 @@
 
 歌迷自發的非官方靜態站：查歌曲演唱會紀錄，以及一些 Fun Facts。
 
-**線上：** https://anchun0409.github.io/miriam-live/
+**線上：** https://anchun0409.github.io/miriam-archive/
 
 ## 頁面
 
