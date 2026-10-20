@@ -268,41 +268,43 @@ window.DataLayer = (() => {
       .sort((a, b) => b.times - a.times || a.song.title.localeCompare(b.song.title, "zh-Hant"))
       .slice(0, 5);
 
-    // songs that started in Minor Classics / B minor, later became main rundown elsewhere
+    // Songs that appeared in Minor Classics / B minor, then later became
+    // main rundown at a non-Minor show (not only songs whose *first* live
+    // was Minor — e.g. 稀客 debuted earlier, then Minor → main elsewhere).
     const minorConcertIds = new Set(
       raw.concerts
         .filter((c) => /Minor Classics|B minor/i.test(c.concert_name))
         .map((c) => c.concert_id)
     );
-    const firstDate = {};
-    const firstConcert = {};
+    const firstMinorDate = {};
+    const firstMinorConcert = {};
     raw.performances.forEach((p) => {
       const sess = sessionsById[p.session_id];
-      if (!sess) return;
-      const prev = firstDate[p.song_id];
+      if (!sess || !minorConcertIds.has(sess.concert_id)) return;
+      const prev = firstMinorDate[p.song_id];
       if (!prev || sess.date < prev) {
-        firstDate[p.song_id] = sess.date;
-        firstConcert[p.song_id] = sess.concert_id;
+        firstMinorDate[p.song_id] = sess.date;
+        firstMinorConcert[p.song_id] = sess.concert_id;
       }
     });
     const minorThenMain = [];
-    Object.keys(firstConcert).forEach((song_id) => {
+    Object.keys(firstMinorDate).forEach((song_id) => {
       const song = songsById[song_id];
       if (!song || song.is_other_artist) return;
-      if (!minorConcertIds.has(firstConcert[song_id])) return;
+      const minorDate = firstMinorDate[song_id];
       const laterMain = raw.performances.some((p) => {
         if (p.song_id !== song_id || p.is_main_rundown === false) return false;
         const sess = sessionsById[p.session_id];
-        if (!sess) return false;
-        return !minorConcertIds.has(sess.concert_id);
+        if (!sess || minorConcertIds.has(sess.concert_id)) return false;
+        return sess.date > minorDate;
       });
       if (laterMain) {
-        const origin = concertsById[firstConcert[song_id]];
+        const origin = concertsById[firstMinorConcert[song_id]];
         minorThenMain.push({
           song,
-          first_date: firstDate[song_id],
-          first_concert: origin?.concert_name || firstConcert[song_id],
-          first_concert_id: firstConcert[song_id],
+          first_date: minorDate,
+          first_concert: origin?.concert_name || firstMinorConcert[song_id],
+          first_concert_id: firstMinorConcert[song_id],
         });
       }
     });

@@ -145,13 +145,13 @@
       silentSinceInput.setAttribute(
         "aria-valuetext",
         isSilentSinceActive()
-          ? `自 ${silentSinceYear} 年後未唱過`
+          ? `自${silentSinceYear}起未唱過`
           : "不限年份"
       );
     }
     if (silentSinceText) {
       silentSinceText.textContent = isSilentSinceActive()
-        ? `≤${silentSinceYear}`
+        ? `自${silentSinceYear}起未唱過`
         : "不限";
     }
   }

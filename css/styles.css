@@ -173,7 +173,8 @@ main{
   gap:8px;
   flex:0 0 auto;
   height:36px;
-  width:210px;
+  min-width:210px;
+  max-width:100%;
   padding:0 12px;
   background:var(--surface);
   border:1px solid var(--border);
@@ -183,7 +184,6 @@ main{
 
 .silent-since-label{
   flex:0 0 auto;
-  min-width:2.8em;
   font-size:12px;
   font-weight:700;
   color:var(--purple-700);
@@ -775,6 +775,11 @@ footer,
   margin-top:10px;
   font-size:11px;
   opacity:0.9;
+}
+
+.site-disclaimer .disclaimer-gap{
+  display:inline-block;
+  width:1.6em;
 }
 
 .last-updated{

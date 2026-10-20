@@ -138,6 +138,7 @@
 
       <section class="ff-section">
         <h2>從 Minor 走進主 Rundown</h2>
+        <p class="ff-note">哪些曾經的「冷門歌」唱著唱著就「熱」了</p>
         <ul class="ff-list">${minorList}</ul>
       </section>
     `;

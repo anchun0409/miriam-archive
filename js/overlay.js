@@ -144,6 +144,12 @@ window.Overlay = (() => {
     </div>`;
   }
 
+  function clearAlbumAttr() {
+    if (!els) return;
+    delete els.root.dataset.album;
+    els.root.removeAttribute("data-album");
+  }
+
   function openSetlist(concertId, highlightSongId, preferredSessionId, { push = true } = {}) {
     const concert = DataLayer.getConcert(concertId);
     if (!concert || !els) return;
@@ -152,7 +158,7 @@ window.Overlay = (() => {
     els.root.dataset.mode = "setlist";
     els.root.dataset.concertId = concertId;
     els.root.dataset.songId = highlightSongId || "";
-    els.root.dataset.album = "";
+    clearAlbumAttr();
     els.title.textContent = concert.concert_name;
     els.sub.textContent = concert.concert_name_english || "";
 
@@ -190,12 +196,14 @@ window.Overlay = (() => {
 
   function openAlbum(albumName, { push = true } = {}) {
     if (!els) return;
-    const songs = DataLayer.songsInAlbum(albumName);
+    const name = (albumName || "").trim();
+    if (!name) return;
+    const songs = DataLayer.songsInAlbum(name);
     els.root.dataset.mode = "album";
-    els.root.dataset.album = albumName;
+    els.root.dataset.album = name;
     els.root.dataset.concertId = "";
     els.root.dataset.songId = "";
-    els.title.textContent = albumName;
+    els.title.textContent = name;
     els.sub.textContent = `專輯曲目 · 共 ${songs.length} 首`;
     setSessionControlsVisible(false);
 
@@ -232,7 +240,7 @@ window.Overlay = (() => {
 
     els.root.classList.add("open");
     document.body.classList.add("modal-open");
-    if (push) pushUrl(urlParamsFromState({ album: albumName }));
+    if (push) pushUrl(urlParamsFromState({ album: name }));
   }
 
   function openSong(songId, { push = true } = {}) {
@@ -248,7 +256,7 @@ window.Overlay = (() => {
     els.root.dataset.mode = "song";
     els.root.dataset.songId = songId;
     els.root.dataset.concertId = "";
-    els.root.dataset.album = "";
+    clearAlbumAttr();
     els.title.textContent = song.title;
     els.sub.textContent =
       song.language === "國語"
@@ -322,8 +330,8 @@ window.Overlay = (() => {
 
     els.root.dataset.mode = "";
     els.root.dataset.concertId = "";
-    els.root.dataset.album = "";
     els.root.dataset.songId = "";
+    clearAlbumAttr();
     els.root.dataset.highlightSong = "";
   }
 
@@ -363,15 +371,23 @@ window.Overlay = (() => {
     });
 
     els.root.addEventListener("click", (e) => {
+      // Prefer close / backdrop so empty data-album="" on the modal root
+      // (from dataset clears) never hijacks the close click.
+      if (e.target.closest("[data-close-modal]") || e.target === els.root) {
+        closeModalOnly();
+        return;
+      }
+
       const albumBtn = e.target.closest("[data-album]");
-      if (albumBtn) {
-        openAlbum(albumBtn.getAttribute("data-album"));
+      const albumName = albumBtn?.getAttribute("data-album")?.trim();
+      if (albumName) {
+        openAlbum(albumName);
         return;
       }
 
       const concertBtn = e.target.closest("[data-concert]");
-      if (concertBtn) {
-        const concertId = concertBtn.getAttribute("data-concert");
+      const concertId = concertBtn?.getAttribute("data-concert")?.trim();
+      if (concertId) {
         const songId = els.root.dataset.songId || els.root.dataset.highlightSong || "";
         openSetlist(concertId, songId);
         return;
