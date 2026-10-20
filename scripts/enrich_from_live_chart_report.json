@@ -1,0 +1,385 @@
+{
+  "before": {
+    "songs": 339,
+    "concerts": 11,
+    "sessions": 59,
+    "performances": 1379,
+    "guoyu": 32,
+    "other_artist": 8
+  },
+  "after": {
+    "songs": 357,
+    "concerts": 32,
+    "sessions": 170,
+    "performances": 4947,
+    "guoyu": 32,
+    "other_artist": 8
+  },
+  "song_stats": {
+    "matched": 295,
+    "composer_updated": 33,
+    "arranger_updated": 153,
+    "unmatched": 44,
+    "album_normalized": 10,
+    "album_filled": 18,
+    "year_corrected": 13,
+    "lyricist_updated": 18,
+    "songs_added": 18
+  },
+  "concert_stats": {
+    "concerts_added": 21,
+    "sessions_added": 111,
+    "performances_added": 3568,
+    "perf_unmatched_title": 359,
+    "session_venue_filled": 18
+  },
+  "notable_corrections": [
+    [
+      "composer",
+      "三分鐘戀愛熱度",
+      "C.Y.Kong",
+      "江志仁"
+    ],
+    [
+      "arranger",
+      "因為所以(畢氏定理)",
+      "梁基爵",
+      "褚鎮東"
+    ],
+    [
+      "album_norm",
+      "可人兒",
+      "Play It Loud Kiss Me Soft (2000)",
+      "Play It Loud, Kiss Me Soft (2000)"
+    ],
+    [
+      "album_norm",
+      "少女的祈禱",
+      "Play It Loud Kiss Me Soft (2000)",
+      "Play It Loud, Kiss Me Soft (2000)"
+    ],
+    [
+      "album_norm",
+      "放煙花",
+      "Play It Loud Kiss Me Soft (2000)",
+      "Play It Loud, Kiss Me Soft (2000)"
+    ],
+    [
+      "album_fill",
+      "彈珠人的愛心炸彈",
+      "n.a. (1998)",
+      "冬天的故事 (1999)"
+    ],
+    [
+      "year_fix",
+      "彈珠人的愛心炸彈",
+      1998,
+      1999
+    ],
+    [
+      "composer",
+      "彈珠人的愛心炸彈",
+      "淡谷N'次郎",
+      "淡谷N次郎"
+    ],
+    [
+      "arranger",
+      "個個都有寶",
+      "",
+      "C.Y.Kong"
+    ],
+    [
+      "arranger",
+      "冰點",
+      "周博賢+蔡德才",
+      "周博賢/蔡德才"
+    ],
+    [
+      "arranger",
+      "超齡",
+      "",
+      "蔡德才"
+    ],
+    [
+      "composer",
+      "水月鏡花",
+      "于逸堯",
+      "于逸堯@人山人海"
+    ],
+    [
+      "arranger",
+      "水月鏡花",
+      "",
+      "于逸堯@人山人海/蔡德才@人山人海"
+    ],
+    [
+      "arranger",
+      "民間傳奇",
+      "",
+      "Eric Kwok"
+    ],
+    [
+      "arranger",
+      "的士司機",
+      "",
+      "蔡德才"
+    ],
+    [
+      "arranger",
+      "電光幻影",
+      "",
+      "于逸堯"
+    ],
+    [
+      "arranger",
+      "風采依然",
+      "",
+      "蔡德才"
+    ],
+    [
+      "arranger",
+      "寒舍",
+      "",
+      "伍樂城"
+    ],
+    [
+      "lyricist",
+      "心魔",
+      "許紹榮",
+      "許少榮"
+    ],
+    [
+      "arranger",
+      "藍與黑",
+      "",
+      "鍾成虎"
+    ],
+    [
+      "composer",
+      "深息",
+      "C.Y.Kong + Jean Chien",
+      "江志仁/錢文璟"
+    ],
+    [
+      "arranger",
+      "稀客",
+      "",
+      "雷頌德"
+    ],
+    [
+      "arranger",
+      "芬梨道上",
+      "",
+      "于逸堯@人山人海"
+    ],
+    [
+      "arranger",
+      "魂斷威尼斯",
+      "",
+      "李端嫻/at17"
+    ],
+    [
+      "composer",
+      "亦舒說",
+      "側田",
+      "側田@On Your Mark"
+    ],
+    [
+      "arranger",
+      "亦舒說",
+      "",
+      "Ted Lo"
+    ],
+    [
+      "album_fill",
+      "有過去的女人",
+      "n.a. (2006)",
+      "金牌女兒紅 (2006)"
+    ],
+    [
+      "arranger",
+      "有過去的女人",
+      "",
+      "側田"
+    ],
+    [
+      "arranger",
+      "咬唇",
+      "",
+      "伍樂城"
+    ],
+    [
+      "arranger",
+      "我等我在",
+      "",
+      "于逸堯"
+    ],
+    [
+      "year_fix",
+      "火鳥",
+      2012,
+      2011
+    ],
+    [
+      "arranger",
+      "火鳥",
+      "",
+      "陳輝陽"
+    ],
+    [
+      "arranger",
+      "小城大事",
+      "",
+      "雷頌德"
+    ],
+    [
+      "arranger",
+      "原來過得很快樂",
+      "",
+      "伍仲衡"
+    ],
+    [
+      "arranger",
+      "因為所以",
+      "禇鎮東",
+      "褚鎮東"
+    ],
+    [
+      "arranger",
+      "烈女",
+      "",
+      "雷頌德"
+    ],
+    [
+      "arranger",
+      "當女飛俠愛上萬能俠",
+      "",
+      "陳奐仁"
+    ],
+    [
+      "arranger",
+      "處處吻",
+      "",
+      "雷頌德"
+    ],
+    [
+      "album_fill",
+      "色惑",
+      "n.a. (2014)",
+      "色惑 (2014)"
+    ],
+    [
+      "arranger",
+      "斗零踭",
+      "",
+      "蔡德才"
+    ]
+  ],
+  "concerts_added": [
+    [
+      "concert_add",
+      "C012",
+      "楊千嬅加州紅紅人館903狂熱份子音樂會"
+    ],
+    [
+      "concert_add",
+      "C013",
+      "叱吒903狂熱份子六神合體音樂會"
+    ],
+    [
+      "concert_add",
+      "C014",
+      "Music is Live Miriam 楊千嬅拉闊音樂會"
+    ],
+    [
+      "concert_add",
+      "C015",
+      "楊千嬅萬紫千紅演唱會"
+    ],
+    [
+      "concert_add",
+      "C016",
+      "Music is Live 明哥X楊千嬅"
+    ],
+    [
+      "concert_add",
+      "C017",
+      "楊千嬅演唱會開年大典 Vol.3"
+    ],
+    [
+      "concert_add",
+      "C018",
+      "楊千嬅X林一峰拉闊音樂會"
+    ],
+    [
+      "concert_add",
+      "C019",
+      "楊千嬅萬紫千嬅十年一晚夜"
+    ],
+    [
+      "concert_add",
+      "C020",
+      "古舞飛楊大馬新年演唱會"
+    ],
+    [
+      "concert_add",
+      "C021",
+      "拉闊黃金十年音樂會"
+    ],
+    [
+      "concert_add",
+      "C022",
+      "楊千嬅 All About Love 2007 演唱會"
+    ],
+    [
+      "concert_add",
+      "C023",
+      "又一個叱吒十年回歸音樂會"
+    ],
+    [
+      "concert_add",
+      "C024",
+      "拉闊音樂會：楊千嬅X林海峰X郭偉亮X農夫"
+    ],
+    [
+      "concert_add",
+      "C025",
+      "Ladies & Gentlemen 楊千嬅世界巡迴演唱會"
+    ],
+    [
+      "concert_add",
+      "C026",
+      "903 ID CLUB 拉闊音樂會：陳奕迅X梁漢文X楊千嬅"
+    ],
+    [
+      "concert_add",
+      "C027",
+      "拉闊時代曲：楊千嬅X羅力威X許廷鏗X藍奕邦"
+    ],
+    [
+      "concert_add",
+      "C028",
+      "楊千嬅「突然想起余春嬌」唱遊會"
+    ],
+    [
+      "concert_add",
+      "C029",
+      "903夢想系 拉闊小時會：一千零一個楊千嬅的故事"
+    ],
+    [
+      "concert_add",
+      "C030",
+      "MOOV Live：楊千嬅XSupper Moment"
+    ],
+    [
+      "concert_add",
+      "C031",
+      "楊千嬅 MY TREE OF LIVE 世界巡迴演唱會 1.0（海外）"
+    ],
+    [
+      "concert_add",
+      "C032",
+      "楊千嬅 Live MY LIVE 1.0 世界巡迴演唱會（含1.5）"
+    ]
+  ]
+}
