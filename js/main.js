@@ -225,23 +225,32 @@
       return;
     }
 
-    modalList.innerHTML = items
-      .map((p, i) => {
-        const title = p.song?.title || p.song_id;
-        const other = originalTagHTML(p.song);
-        const encore =
-          p.is_main_rundown === false
-            ? '<span class="tag-encore">Encore</span>'
-            : "";
-        const label = perfLabelHTML(p.notes);
-        const highlight =
-          highlightSongId && p.song_id === highlightSongId ? " highlight" : "";
-        return `<div class="setlist-item${highlight}">
-          <span class="setlist-num">${i + 1}</span>
-          <span class="setlist-title">${escapeHtml(title)}${label}${other}${encore}</span>
-        </div>`;
-      })
-      .join("");
+    const main = [];
+    const encore = [];
+    items.forEach((p, i) => {
+      const row = { p, i };
+      if (p.is_main_rundown === false) encore.push(row);
+      else main.push(row);
+    });
+
+    const rowHTML = ({ p, i }) => {
+      const title = p.song?.title || p.song_id;
+      const other = originalTagHTML(p.song);
+      const label = perfLabelHTML(p.notes);
+      const highlight =
+        highlightSongId && p.song_id === highlightSongId ? " highlight" : "";
+      return `<div class="setlist-item${highlight}">
+        <span class="setlist-num">${i + 1}</span>
+        <span class="setlist-title">${escapeHtml(title)}${label}${other}</span>
+      </div>`;
+    };
+
+    let html = main.map(rowHTML).join("");
+    if (encore.length) {
+      html += `<div class="setlist-encore-head">Encore</div>`;
+      html += encore.map(rowHTML).join("");
+    }
+    modalList.innerHTML = html;
   }
 
   function openSetlistModal(concertId, highlightSongId) {
