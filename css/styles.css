@@ -733,6 +733,15 @@ button.setlist-item:hover{
   color:var(--text-muted);
 }
 
+.perf-label{
+  margin-left:4px;
+  font-family:'Manrope', sans-serif;
+  font-size:12px;
+  font-weight:500;
+  color:var(--text-muted);
+  opacity:0.9;
+}
+
 @media (max-width:640px){
   .site-header{flex-direction:column;align-items:flex-start;gap:14px;}
   .ticket-year-block{grid-template-columns:36px 1fr;}

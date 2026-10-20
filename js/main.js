@@ -24,6 +24,21 @@
     return `${m}/${d}`;
   }
 
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  /** Parenthetical performance label, e.g. （清唱一小段） / （ft.側田） */
+  function perfLabelHTML(notes) {
+    const n = (notes || "").trim();
+    if (!n) return "";
+    return `<span class="perf-label">（${escapeHtml(n)}）</span>`;
+  }
+
   function ticketHTML(entry) {
     const keys = entry.sessions.map((s) => DataLayer.locationKey(s));
     const sharedLoc =
@@ -217,12 +232,12 @@
           p.is_main_rundown === false
             ? '<span class="tag-encore">Encore</span>'
             : "";
-        const note = p.notes ? `<span class="setlist-note">${p.notes}</span>` : "";
+        const label = perfLabelHTML(p.notes);
         const highlight =
           highlightSongId && p.song_id === highlightSongId ? " highlight" : "";
         return `<div class="setlist-item${highlight}">
           <span class="setlist-num">${i + 1}</span>
-          <span class="setlist-title">${title}${other}${encore}${note}</span>
+          <span class="setlist-title">${escapeHtml(title)}${label}${other}${encore}</span>
         </div>`;
       })
       .join("");
