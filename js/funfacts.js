@@ -147,7 +147,6 @@
 
       <section class="ff-section">
         <h2>從 Minor 走進主 Rundown</h2>
-        <p class="ff-note">哪些歌開始是 Minor（B minor 或 Minor Classics），後來變成主 rundown</p>
         <ul class="ff-list">${minorList}</ul>
       </section>
     `;

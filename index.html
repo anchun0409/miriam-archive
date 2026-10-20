@@ -37,17 +37,11 @@
           <option value="shows-desc">按演出場次 高→低</option>
           <option value="shows-asc">按演出場次 低→高</option>
         </select>
-        <div class="year-range" id="year-range" aria-label="最近演唱年份範圍">
-          <div class="year-range-head">
-            <span class="year-range-title">最近演唱</span>
-            <span class="year-range-value" id="year-range-value">—</span>
-          </div>
-          <div class="year-range-slider">
-            <div class="year-range-rail"></div>
-            <div class="year-range-fill" id="year-range-fill"></div>
-            <input type="range" id="year-from" class="year-range-input" aria-label="起始年份" />
-            <input type="range" id="year-to" class="year-range-input" aria-label="結束年份" />
-          </div>
+        <div class="silent-since" id="silent-since">
+          <label class="silent-since-label" for="silent-since-year">
+            <span id="silent-since-text">不限年份</span>
+          </label>
+          <input type="range" id="silent-since-year" class="silent-since-input" aria-label="自某年後未唱" />
         </div>
       </div>
       <div class="result-count" id="result-count"></div>
