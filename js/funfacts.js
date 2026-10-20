@@ -12,18 +12,7 @@
       .replace(/"/g, "&quot;");
   }
 
-  function songHref(songId) {
-    return `index.html?song=${encodeURIComponent(songId)}`;
-  }
-
-  function concertHref(concertId, sessionId) {
-    let url = `index.html?concert=${encodeURIComponent(concertId)}`;
-    if (sessionId) url += `&session=${encodeURIComponent(sessionId)}`;
-    return url;
-  }
-
   async function asOfMonth() {
-    // Prefer stamped last-updated month; fall back to current calendar month (HK).
     try {
       const res = await fetch("data/last-updated.json", { cache: "no-store" });
       if (res.ok) {
@@ -52,6 +41,8 @@
       throw new Error("DataLayer.funFacts 不存在，請重新整理或更新 js/data.js。");
     }
 
+    Overlay.init({ syncUrl: false });
+
     const f = DL.funFacts();
     const asOfText = await asOfMonth();
 
@@ -61,7 +52,7 @@
         const s = row.session;
         return `<li>
           <span class="ff-rank">Top ${i + 1}</span>
-          <a class="ff-link ff-main" href="${concertHref(c.concert_id, s.session_id)}">${escapeHtml(c.concert_name)}</a>
+          <button type="button" class="ff-link ff-main" data-open-concert="${c.concert_id}" data-open-session="${s.session_id}">${escapeHtml(c.concert_name)}</button>
           <span class="ff-sub">（${escapeHtml(s.city)} ${escapeHtml(s.date)}）· ${row.count} 首</span>
         </li>`;
       })
@@ -71,7 +62,7 @@
       .map(
         (row, i) => `<li>
           <span class="ff-rank">${i + 1}.</span>
-          <a class="ff-link ff-main" href="${songHref(row.song.song_id)}">${escapeHtml(row.song.title)}</a>
+          <button type="button" class="ff-link ff-main" data-open-song="${row.song.song_id}">${escapeHtml(row.song.title)}</button>
           <span class="ff-sub">${row.times} 次</span>
         </li>`
       )
@@ -91,7 +82,7 @@
       .map(
         (row, i) => `<li>
           <span class="ff-rank">Top ${i + 1}</span>
-          <a class="ff-link ff-main" href="${songHref(row.song.song_id)}">${escapeHtml(row.song.title)}</a>
+          <button type="button" class="ff-link ff-main" data-open-song="${row.song.song_id}">${escapeHtml(row.song.title)}</button>
           <span class="ff-sub">安可 ${row.times} 次</span>
         </li>`
       )
@@ -101,7 +92,7 @@
       ? f.minorThenMain
           .map(
             (row) => `<li>
-              <a class="ff-link ff-main" href="${songHref(row.song.song_id)}">${escapeHtml(row.song.title)}</a>
+              <button type="button" class="ff-link ff-main" data-open-song="${row.song.song_id}">${escapeHtml(row.song.title)}</button>
               <span class="ff-sub">首次：${escapeHtml(row.first_date)} · ${escapeHtml(row.first_concert)}</span>
             </li>`
           )
@@ -150,6 +141,23 @@
         <ul class="ff-list">${minorList}</ul>
       </section>
     `;
+
+    root.addEventListener("click", (e) => {
+      const songBtn = e.target.closest("[data-open-song]");
+      if (songBtn) {
+        Overlay.openSong(songBtn.getAttribute("data-open-song"), { push: false });
+        return;
+      }
+      const concertBtn = e.target.closest("[data-open-concert]");
+      if (concertBtn) {
+        Overlay.openSetlist(
+          concertBtn.getAttribute("data-open-concert"),
+          "",
+          concertBtn.getAttribute("data-open-session") || "",
+          { push: false }
+        );
+      }
+    });
   } catch (err) {
     console.error(err);
     root.innerHTML = `<div class="ff-section">

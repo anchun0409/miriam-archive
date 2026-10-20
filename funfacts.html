@@ -9,8 +9,8 @@
 <body>
   <header class="site-header">
     <div class="brand">
-      <div class="brand-title">楊千嬅Live曲目誌</div>
-      <div class="brand-sub">Fun Facts · 演唱會冷知識</div>
+      <a href="index.html" class="brand-title">楊千嬅Live曲目誌</a>
+      <div class="brand-sub">Fun Facts</div>
     </div>
     <nav class="site-nav">
       <a href="index.html">歌曲</a>
@@ -22,14 +22,27 @@
     <div id="funfacts" class="funfacts"></div>
   </main>
 
+  <div class="modal-backdrop" id="setlist-modal" role="dialog" aria-modal="true" aria-labelledby="setlist-modal-title">
+    <div class="modal-panel">
+      <button type="button" class="modal-close" data-close-modal aria-label="關閉">×</button>
+      <div class="modal-header">
+        <div class="modal-title" id="setlist-modal-title"></div>
+        <div class="modal-sub" id="setlist-modal-sub"></div>
+      </div>
+      <label class="session-select-label" for="setlist-session-select">場次</label>
+      <select id="setlist-session-select" class="session-select"></select>
+      <div class="setlist-list" id="setlist-modal-list"></div>
+    </div>
+  </div>
+
   <footer class="site-disclaimer">
-    <strong>Disclaimer</strong>
-    本站為歌迷自發製作的非官方資料庫；資料或有疏漏，僅供參考。歌單與場次整理特別感謝羽佩、Frankie的《楊千嬅演唱會Live歌曲熱力圖》及相關資料，以及其他歌迷分享的 rundown資料。
-    設計與維護：anchun。
-    <div class="last-updated" id="last-updated"></div>
+    <strong>關於本站與致謝</strong>
+    <p>本站為千嬅歌迷自發製作的非官方資料庫，資料或有疏漏，僅供參考。特別感謝羽佩與 Frankie 最初的《楊千嬅演唱會 Live 歌曲熱力圖》帶來啟發，以及羽佩的《楊千嬅 Live 影響力係數榜》整理的歌單與場次資料；亦感謝其他歌迷各平台無私分享歌單，讓這份紀錄更完整。</p>
+    <p class="disclaimer-meta">設計與維護：anchun  |  <span class="last-updated" id="last-updated">最後更新：—</span></p>
   </footer>
 
   <script src="js/data.js"></script>
+  <script src="js/overlay.js"></script>
   <script src="js/last-updated.js"></script>
   <script src="js/funfacts.js"></script>
 </body>

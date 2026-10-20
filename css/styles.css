@@ -57,6 +57,11 @@ a{color:inherit;}
   font-size:30px;
   color:var(--purple-900);
   letter-spacing:0.02em;
+  text-decoration:none;
+}
+
+a.brand-title:hover{
+  color:var(--purple-700);
 }
 
 .brand-sub{
@@ -165,12 +170,11 @@ main{
 .silent-since{
   display:flex;
   align-items:center;
-  gap:10px;
-  flex:0 1 260px;
-  min-width:0;
-  max-width:280px;
+  gap:8px;
+  flex:0 0 auto;
   height:36px;
-  padding:0 12px 0 14px;
+  width:210px;
+  padding:0 12px;
   background:var(--surface);
   border:1px solid var(--border);
   border-radius:999px;
@@ -179,46 +183,60 @@ main{
 
 .silent-since-label{
   flex:0 0 auto;
+  min-width:2.8em;
   font-size:12px;
   font-weight:700;
   color:var(--purple-700);
   white-space:nowrap;
   font-variant-numeric:tabular-nums;
-  cursor:default;
 }
 
 .silent-since-input{
-  flex:1 1 90px;
-  min-width:72px;
-  width:100%;
-  height:28px;
+  --silent-pct: 100%;
+  flex:1 1 auto;
+  width:120px;
+  min-width:120px;
+  height:24px;
   margin:0;
+  padding:0;
   -webkit-appearance:none;
   appearance:none;
-  background:transparent;
+  background:linear-gradient(
+    to right,
+    var(--purple-700) 0%,
+    var(--purple-700) var(--silent-pct),
+    var(--purple-150) var(--silent-pct),
+    var(--purple-150) 100%
+  );
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:100% 4px;
+  border-radius:999px;
   cursor:pointer;
+  touch-action:pan-y;
 }
 
 .silent-since-input:focus{
-  outline:none;
+  outline:2px solid var(--purple-300);
+  outline-offset:2px;
 }
 
 .silent-since-input::-webkit-slider-runnable-track{
   height:4px;
   border-radius:999px;
-  background:linear-gradient(90deg, var(--purple-700), var(--purple-300));
+  background:transparent;
 }
 
 .silent-since-input::-webkit-slider-thumb{
   -webkit-appearance:none;
   appearance:none;
-  width:16px;
-  height:16px;
-  margin-top:-6px;
+  width:18px;
+  height:18px;
+  margin-top:-7px;
   border-radius:50%;
-  background:#fff;
-  border:2px solid var(--purple-700);
-  box-shadow:0 1px 2px rgba(80,40,90,.2);
+  background:var(--purple-700);
+  border:2px solid #fff;
+  box-shadow:0 1px 3px rgba(80,40,90,.28);
   cursor:grab;
 }
 
@@ -229,17 +247,17 @@ main{
 .silent-since-input::-moz-range-track{
   height:4px;
   border-radius:999px;
-  background:linear-gradient(90deg, var(--purple-700), var(--purple-300));
+  background:transparent;
   border:none;
 }
 
 .silent-since-input::-moz-range-thumb{
-  width:16px;
-  height:16px;
+  width:18px;
+  height:18px;
   border-radius:50%;
-  background:#fff;
-  border:2px solid var(--purple-700);
-  box-shadow:0 1px 2px rgba(80,40,90,.2);
+  background:var(--purple-700);
+  border:2px solid #fff;
+  box-shadow:0 1px 3px rgba(80,40,90,.28);
   cursor:grab;
 }
 
@@ -249,8 +267,10 @@ main{
     width:100%;
   }
   .silent-since{
-    flex:1 1 100%;
-    max-width:none;
+    width:100%;
+  }
+  .silent-since-input{
+    min-width:0;
   }
 }
 
@@ -345,6 +365,21 @@ main{
   font-size:23px;
   color:var(--purple-900);
   line-height:1.25;
+}
+
+button.song-title{
+  display:block;
+  width:100%;
+  margin:0;
+  padding:0;
+  border:none;
+  background:transparent;
+  text-align:left;
+  cursor:pointer;
+}
+
+button.song-title:hover{
+  color:var(--purple-700);
 }
 
 .song-lang{
@@ -732,11 +767,19 @@ footer,
   letter-spacing:0.04em;
 }
 
-.last-updated{
+.site-disclaimer p{
+  margin:0;
+}
+
+.site-disclaimer .disclaimer-meta{
   margin-top:10px;
   font-size:11px;
-  color:var(--text-muted);
   opacity:0.9;
+}
+
+.last-updated{
+  font-size:inherit;
+  color:inherit;
 }
 
 /* Fun Facts */
@@ -813,9 +856,38 @@ footer,
   transition:color .15s ease, text-decoration-color .15s ease;
 }
 
+button.ff-link{
+  display:inline;
+  margin:0;
+  padding:0;
+  border:none;
+  background:transparent;
+  font:inherit;
+  font-weight:600;
+  cursor:pointer;
+  text-align:left;
+}
+
 .ff-link:hover{
   color:var(--purple-900);
   text-decoration-color:var(--purple-300);
+}
+
+.overlay-song{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.overlay-song-history-label{
+  font-size:12px;
+  font-weight:700;
+  color:var(--text-muted);
+  letter-spacing:.04em;
+}
+
+.overlay-song .history-list{
+  max-height:none;
 }
 
 .ff-sub{

@@ -6,20 +6,14 @@
   const sortSelect = document.getElementById("song-sort");
   const silentSinceInput = document.getElementById("silent-since-year");
   const silentSinceText = document.getElementById("silent-since-text");
-  const modal = document.getElementById("setlist-modal");
-  const modalTitle = document.getElementById("setlist-modal-title");
-  const modalSub = document.getElementById("setlist-modal-sub");
-  const modalSession = document.getElementById("setlist-session-select");
-  const modalSessionLabel = document.querySelector('label[for="setlist-session-select"]');
-  const modalList = document.getElementById("setlist-modal-list");
 
   await DataLayer.load();
 
   let liveFilter = "all"; // all | performed | never
   let songSort = "shows-desc"; // shows-desc | shows-asc
 
-  // Slider: drag left to keep songs last sung in/before that year
-  // (i.e. haven't been performed after that year). Max = no filter.
+  // Slider: drag left → songs last sung in/before that year (not after).
+  // Max position = no filter.
   const yearBounds = (() => {
     let min = Infinity;
     let max = -Infinity;
@@ -48,11 +42,6 @@
     silentSinceInput.value = String(silentSinceYear);
   }
 
-  function shortDate(dateStr) {
-    const [, m, d] = dateStr.split("-");
-    return `${m}/${d}`;
-  }
-
   function escapeHtml(s) {
     return String(s)
       .replace(/&/g, "&amp;")
@@ -61,18 +50,9 @@
       .replace(/"/g, "&quot;");
   }
 
-  /** Parenthetical performance label, e.g. （清唱一小段） / （ft.側田） */
-  function perfLabelHTML(notes) {
-    const n = (notes || "").trim();
-    if (!n) return "";
-    return `<span class="perf-label">（${escapeHtml(n)}）</span>`;
-  }
-
-  function originalTagHTML(song) {
-    if (!DataLayer.isOtherArtist(song)) return "";
-    const name = DataLayer.originalArtist(song);
-    if (!name) return '<span class="tag-other">原唱：未知</span>';
-    return `<span class="tag-other">原唱：${escapeHtml(name)}</span>`;
+  function shortDate(dateStr) {
+    const [, m, d] = dateStr.split("-");
+    return `${m}/${d}`;
   }
 
   function ticketHTML(entry) {
@@ -157,11 +137,22 @@
   }
 
   function syncSilentSinceUI() {
-    if (silentSinceInput) silentSinceInput.value = String(silentSinceYear);
+    if (silentSinceInput) {
+      silentSinceInput.value = String(silentSinceYear);
+      const span = yearBounds.max - yearBounds.min || 1;
+      const pct = ((silentSinceYear - yearBounds.min) / span) * 100;
+      silentSinceInput.style.setProperty("--silent-pct", `${pct}%`);
+      silentSinceInput.setAttribute(
+        "aria-valuetext",
+        isSilentSinceActive()
+          ? `自 ${silentSinceYear} 年後未唱過`
+          : "不限年份"
+      );
+    }
     if (silentSinceText) {
       silentSinceText.textContent = isSilentSinceActive()
-        ? `自 ${silentSinceYear} 年後未唱`
-        : "不限年份";
+        ? `≤${silentSinceYear}`
+        : "不限";
     }
   }
 
@@ -187,13 +178,13 @@
     return `
     <div class="song-card${never ? " never-performed" : ""}" data-song-id="${song.song_id}">
       <div class="song-card-top">
-        <div class="song-title">
-          ${song.title}${
+        <button type="button" class="song-title" data-select-song="${song.song_id}">
+          ${escapeHtml(song.title)}${
             song.language === "國語"
               ? '<span class="song-lang">國語</span>'
               : ""
           }
-        </div>
+        </button>
       </div>
       ${songMetaHTML(song)}
       ${
@@ -223,7 +214,6 @@
 
     const silentActive = liveFilter !== "never" && isSilentSinceActive();
     if (silentActive) {
-      // Last sung in/before the chosen year → not performed after that year
       songs = songs.filter((s) => {
         const y = lastSungYear(s.song_id);
         return y != null && y <= silentSinceYear;
@@ -256,7 +246,7 @@
     if (liveFilter === "never") {
       resultCount.textContent = `共 ${songs.length} 首尚未有演唱會Live版`;
     } else if (silentActive) {
-      resultCount.textContent = `共 ${songs.length} 首自 ${silentSinceYear} 年後未唱`;
+      resultCount.textContent = `共 ${songs.length} 首自 ${silentSinceYear} 年後未唱過`;
     } else if (liveFilter === "performed") {
       resultCount.textContent = `共 ${songs.length} 首已有演唱會Live版`;
     } else {
@@ -269,7 +259,7 @@
     if (!songs.length) {
       let emptyHint = "請試試其他搜尋關鍵字。";
       if (liveFilter === "never") emptyHint = "目前沒有符合的尚未有Live版歌曲。";
-      else if (silentActive) emptyHint = `沒有自 ${silentSinceYear} 年後未唱的歌曲。`;
+      else if (silentActive) emptyHint = `沒有自 ${silentSinceYear} 年後未唱過的歌曲。`;
       grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
         <div class="big">找不到歌曲</div>
         <div>${emptyHint}</div>
@@ -280,152 +270,67 @@
     grid.innerHTML = songs.map(songCardHTML).join("");
   }
 
-  function setSessionControlsVisible(visible) {
-    modalSession.style.display = visible ? "block" : "none";
-    if (modalSessionLabel) modalSessionLabel.style.display = visible ? "block" : "none";
-  }
-
-  function renderSetlist(sessionId, highlightSongId) {
-    const items = DataLayer.setlistForSession(sessionId);
-    if (!items.length) {
-      modalList.innerHTML = `<div class="history-empty">此場次暫無歌單資料。</div>`;
-      return;
-    }
-
-    const main = [];
-    const encore = [];
-    items.forEach((p, i) => {
-      const row = { p, i };
-      if (p.is_main_rundown === false) encore.push(row);
-      else main.push(row);
-    });
-
-    const rowHTML = ({ p, i }) => {
-      const title = p.song?.title || p.song_id;
-      const other = originalTagHTML(p.song);
-      const label = perfLabelHTML(p.notes);
-      const highlight =
-        highlightSongId && p.song_id === highlightSongId ? " highlight" : "";
-      return `<div class="setlist-item${highlight}">
-        <span class="setlist-num">${i + 1}</span>
-        <span class="setlist-title">${escapeHtml(title)}${label}${other}</span>
-      </div>`;
-    };
-
-    let html = main.map(rowHTML).join("");
-    if (encore.length) {
-      html += `<div class="setlist-encore-head">Encore</div>`;
-      html += encore.map(rowHTML).join("");
-    }
-    modalList.innerHTML = html;
-  }
-
-  function openSetlistModal(concertId, highlightSongId, preferredSessionId) {
-    const concert = DataLayer.getConcert(concertId);
-    if (!concert) return;
-
-    const sessions = DataLayer.sessionsForConcert(concertId);
-    modal.dataset.mode = "setlist";
-    modalTitle.textContent = concert.concert_name;
-    modalSub.textContent = concert.concert_name_english || "";
-
-    modalSession.innerHTML = sessions
-      .map((s) => {
-        const loc = DataLayer.formatLocation(s);
-        return `<option value="${s.session_id}">${s.date} · ${loc}</option>`;
-      })
-      .join("");
-
-    setSessionControlsVisible(sessions.length > 1);
-    modal.dataset.highlightSong = highlightSongId || "";
-    modal.classList.add("open");
-    document.body.classList.add("modal-open");
-
-    const preferred =
-      preferredSessionId && sessions.some((s) => s.session_id === preferredSessionId)
-        ? preferredSessionId
-        : sessions[0]?.session_id;
-    if (preferred) {
-      modalSession.value = preferred;
-      renderSetlist(preferred, highlightSongId);
-    }
-  }
-
-  function openAlbumModal(albumName) {
-    const songs = DataLayer.songsInAlbum(albumName);
-    modal.dataset.mode = "album";
-    modalTitle.textContent = albumName;
-    modalSub.textContent = `專輯曲目 · 共 ${songs.length} 首`;
-    setSessionControlsVisible(false);
-
-    if (!songs.length) {
-      modalList.innerHTML = `<div class="history-empty">此專輯暫無歌曲資料。</div>`;
-    } else {
-      const sorted = [...songs].sort((a, b) => {
-        const ya = a.release_year || 0;
-        const yb = b.release_year || 0;
-        if (ya !== yb) return ya - yb;
-        return a.title.localeCompare(b.title, "zh-Hant");
-      });
-      modalList.innerHTML = sorted
-        .map((s, i) => {
-          const other = s.is_other_artist;
-          const never = !other && !DataLayer.hasBeenPerformed(s.song_id);
-          const tags = [
-            other ? originalTagHTML(s) : "",
-            never ? '<span class="tag-never">尚未有Live版</span>' : "",
-          ].join("");
-          if (other) {
-            return `<div class="setlist-item album-song-row other-artist">
-              <span class="setlist-num">${i + 1}</span>
-              <span class="setlist-title">${s.title}${tags}</span>
-            </div>`;
-          }
-          return `<button type="button" class="setlist-item album-song-row" data-jump-song="${s.song_id}">
-            <span class="setlist-num">${i + 1}</span>
-            <span class="setlist-title">${s.title}${tags}</span>
-          </button>`;
-        })
-        .join("");
-    }
-
-    modal.classList.add("open");
-    document.body.classList.add("modal-open");
-  }
-
-  function closeSetlistModal() {
-    modal.classList.remove("open");
-    document.body.classList.remove("modal-open");
-  }
-
-  function jumpToSong(songId) {
-    closeSetlistModal();
+  function flashSong(songId) {
     const card = grid.querySelector(`[data-song-id="${songId}"]`);
-    if (!card) {
-      const song = DataLayer.getSong(songId);
-      if (song) {
-        searchInput.value = song.title;
-        render(song.title);
-        requestAnimationFrame(() => {
-          const el = grid.querySelector(`[data-song-id="${songId}"]`);
-          if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "center" });
-            el.classList.add("flash");
-            setTimeout(() => el.classList.remove("flash"), 1200);
-          }
-        });
-      }
-      return;
-    }
+    if (!card) return false;
     card.scrollIntoView({ behavior: "smooth", block: "center" });
     card.classList.add("flash");
     setTimeout(() => card.classList.remove("flash"), 1200);
+    return true;
   }
 
+  function jumpToSong(songId, { updateUrl = true } = {}) {
+    Overlay.close({ updateUrl: false });
+    if (liveFilter === "never" && DataLayer.hasBeenPerformed(songId)) {
+      liveFilter = "all";
+      document.querySelectorAll(".filter-pill").forEach((el) => {
+        el.classList.toggle("active", el.getAttribute("data-live-filter") === "all");
+      });
+    }
+
+    let card = grid.querySelector(`[data-song-id="${songId}"]`);
+    if (!card) {
+      const song = DataLayer.getSong(songId);
+      if (song) {
+        searchInput.value = "";
+        // Clear silence filter if it hides the song
+        const y = lastSungYear(songId);
+        if (y != null && isSilentSinceActive() && y > silentSinceYear) {
+          silentSinceYear = yearBounds.max;
+        }
+        render("");
+      }
+    }
+
+    requestAnimationFrame(() => {
+      if (!flashSong(songId)) {
+        const song = DataLayer.getSong(songId);
+        if (song) {
+          searchInput.value = song.title;
+          render(song.title);
+          requestAnimationFrame(() => flashSong(songId));
+        }
+      }
+    });
+
+    if (updateUrl) Overlay.pushSongUrl(songId);
+  }
+
+  Overlay.init({
+    syncUrl: true,
+    onJumpSong: (id) => jumpToSong(id, { updateUrl: true }),
+  });
+
   grid.addEventListener("click", (e) => {
+    const selectSong = e.target.closest("[data-select-song]");
+    if (selectSong) {
+      jumpToSong(selectSong.getAttribute("data-select-song"), { updateUrl: true });
+      return;
+    }
+
     const albumBtn = e.target.closest("[data-album]");
     if (albumBtn) {
-      openAlbumModal(albumBtn.getAttribute("data-album"));
+      Overlay.openAlbum(albumBtn.getAttribute("data-album"));
       return;
     }
 
@@ -434,7 +339,7 @@
       const concertId = concertBtn.getAttribute("data-concert");
       const card = concertBtn.closest("[data-song-id]");
       const songId = card?.getAttribute("data-song-id") || "";
-      openSetlistModal(concertId, songId);
+      Overlay.openSetlist(concertId, songId);
       return;
     }
 
@@ -444,28 +349,6 @@
       const list = document.getElementById(`history-${id}`);
       list.classList.toggle("open");
       toggleBtn.classList.toggle("open");
-    }
-  });
-
-  modalSession.addEventListener("change", () => {
-    if (modal.dataset.mode !== "setlist") return;
-    renderSetlist(modalSession.value, modal.dataset.highlightSong || "");
-  });
-
-  modal.addEventListener("click", (e) => {
-    const jump = e.target.closest("[data-jump-song]");
-    if (jump) {
-      jumpToSong(jump.getAttribute("data-jump-song"));
-      return;
-    }
-    if (e.target.closest("[data-close-modal]") || e.target === modal) {
-      closeSetlistModal();
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("open")) {
-      closeSetlistModal();
     }
   });
 
@@ -486,33 +369,49 @@
     render(searchInput.value);
   });
 
-  silentSinceInput?.addEventListener("input", () => {
+  function onSilentSinceInput() {
     silentSinceYear = Number(silentSinceInput.value);
+    if (!Number.isFinite(silentSinceYear)) silentSinceYear = yearBounds.max;
+    syncSilentSinceUI();
     render(searchInput.value);
+  }
+
+  silentSinceInput?.addEventListener("input", onSilentSinceInput);
+  silentSinceInput?.addEventListener("change", onSilentSinceInput);
+
+  function applyDeepLink() {
+    const params = new URLSearchParams(location.search);
+    const deepSong = params.get("song");
+    const deepConcert = params.get("concert");
+    const deepSession = params.get("session");
+    const deepAlbum = params.get("album");
+
+    if (deepAlbum) {
+      Overlay.openAlbum(deepAlbum, { push: false });
+      return;
+    }
+
+    if (deepSong) {
+      jumpToSong(deepSong, { updateUrl: false });
+      if (deepConcert) {
+        setTimeout(
+          () => Overlay.openSetlist(deepConcert, deepSong, deepSession || "", { push: false }),
+          350
+        );
+      }
+      return;
+    }
+
+    if (deepConcert) {
+      Overlay.openSetlist(deepConcert, "", deepSession || "", { push: false });
+    }
+  }
+
+  window.addEventListener("popstate", () => {
+    Overlay.close({ updateUrl: false });
+    applyDeepLink();
   });
 
   render("");
-
-  // Deep links from Fun Facts: ?song=S001 / ?concert=C008&session=C008-1
-  const params = new URLSearchParams(location.search);
-  const deepSong = params.get("song");
-  const deepConcert = params.get("concert");
-  const deepSession = params.get("session");
-
-  if (deepSong) {
-    // Ensure the song is visible (clear never-only filter if needed)
-    if (liveFilter === "never" && DataLayer.hasBeenPerformed(deepSong)) {
-      liveFilter = "all";
-      document.querySelectorAll(".filter-pill").forEach((el) => {
-        el.classList.toggle("active", el.getAttribute("data-live-filter") === "all");
-      });
-      render("");
-    }
-    jumpToSong(deepSong);
-    if (deepConcert) {
-      setTimeout(() => openSetlistModal(deepConcert, deepSong, deepSession || ""), 350);
-    }
-  } else if (deepConcert) {
-    openSetlistModal(deepConcert, "", deepSession || "");
-  }
+  applyDeepLink();
 })();

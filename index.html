@@ -9,7 +9,7 @@
 <body>
   <header class="site-header">
     <div class="brand">
-      <div class="brand-title">楊千嬅Live曲目誌</div>
+      <a href="index.html" class="brand-title">楊千嬅Live曲目誌</a>
       <div class="brand-sub">期待再期待 下一首遺珠上桌</div>
     </div>
     <nav class="site-nav">
@@ -37,11 +37,9 @@
           <option value="shows-desc">按演出場次 高→低</option>
           <option value="shows-asc">按演出場次 低→高</option>
         </select>
-        <div class="silent-since" id="silent-since">
-          <label class="silent-since-label" for="silent-since-year">
-            <span id="silent-since-text">不限年份</span>
-          </label>
-          <input type="range" id="silent-since-year" class="silent-since-input" aria-label="自某年後未唱" />
+        <div class="silent-since" id="silent-since" title="拖曳以篩選：自該年後未再演唱的歌曲">
+          <span class="silent-since-label" id="silent-since-text">不限</span>
+          <input type="range" id="silent-since-year" class="silent-since-input" aria-label="自某年後未唱過" />
         </div>
       </div>
       <div class="result-count" id="result-count"></div>
@@ -64,13 +62,13 @@
   </div>
 
   <footer class="site-disclaimer">
-    <strong>Disclaimer</strong>
-    本站為歌迷自發製作的非官方資料庫；資料或有疏漏，僅供參考。歌單與場次整理特別感謝羽佩、Frankie的《楊千嬅演唱會Live歌曲熱力圖》及相關資料，以及其他歌迷分享的 rundown資料。
-    設計與維護：anchun。
-    <div class="last-updated" id="last-updated"></div>
+    <strong>關於本站與致謝</strong>
+    <p>本站為千嬅歌迷自發製作的非官方資料庫，資料或有疏漏，僅供參考。特別感謝羽佩與 Frankie 最初的《楊千嬅演唱會 Live 歌曲熱力圖》帶來啟發，以及羽佩的《楊千嬅 Live 影響力係數榜》整理的歌單與場次資料；亦感謝其他歌迷各平台無私分享歌單，讓這份紀錄更完整。</p>
+    <p class="disclaimer-meta">設計與維護：anchun  |  <span class="last-updated" id="last-updated">最後更新：—</span></p>
   </footer>
 
   <script src="js/data.js"></script>
+  <script src="js/overlay.js"></script>
   <script src="js/last-updated.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
