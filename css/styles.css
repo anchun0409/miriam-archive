@@ -761,6 +761,16 @@ footer,
   font-weight:700;
 }
 
+.site-disclaimer a{
+  color:var(--purple-700);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+.site-disclaimer a:hover{
+  color:var(--purple-900);
+}
+
 .site-disclaimer > strong:first-child{
   display:block;
   margin-bottom:6px;
