@@ -201,7 +201,7 @@ window.DataLayer = (() => {
     return /拉闊|Music is Live/i.test(name);
   }
 
-  // Fan label「個唱」for major solo arena/HK Coliseum-class tours
+  // Fan labels for major solo shows vs world tours
   const GECHANG_CONCERT_IDS = new Set([
     "C001",
     "C015",
@@ -211,23 +211,31 @@ window.DataLayer = (() => {
     "C002",
     "C003",
     "C004",
+    "C006",
+    "C009",
+    "C008",
+  ]);
+  const GEXUN_CONCERT_IDS = new Set([
     "C005",
     "C033",
-    "C006",
     "C007",
     "C031",
     "C034",
-    "C009",
-    "C008",
     "C032",
   ]);
 
+  function concertIdOf(concertOrId) {
+    return typeof concertOrId === "string"
+      ? concertOrId
+      : concertOrId?.concert_id;
+  }
+
   function isGechangConcert(concertOrId) {
-    const id =
-      typeof concertOrId === "string"
-        ? concertOrId
-        : concertOrId?.concert_id;
-    return GECHANG_CONCERT_IDS.has(id);
+    return GECHANG_CONCERT_IDS.has(concertIdOf(concertOrId));
+  }
+
+  function isGexunConcert(concertOrId) {
+    return GEXUN_CONCERT_IDS.has(concertIdOf(concertOrId));
   }
 
   function escapeHtml(s) {
@@ -238,7 +246,7 @@ window.DataLayer = (() => {
       .replace(/"/g, "&quot;");
   }
 
-  /** Concert name + optional small「個唱」badge (HTML). */
+  /** Concert name + optional small「個唱」/「個巡」badge (HTML). */
   function concertNameHTML(concertOrId, nameOverride) {
     const concert =
       typeof concertOrId === "string"
@@ -248,9 +256,13 @@ window.DataLayer = (() => {
       nameOverride != null
         ? nameOverride
         : concert?.concert_name || String(concertOrId || "");
-    const tag = isGechangConcert(concert || concertOrId)
-      ? '<span class="tag-gechang">個唱</span>'
-      : "";
+    const id = concertIdOf(concert || concertOrId);
+    let tag = "";
+    if (GEXUN_CONCERT_IDS.has(id)) {
+      tag = '<span class="tag-gechang tag-gexun">個巡</span>';
+    } else if (GECHANG_CONCERT_IDS.has(id)) {
+      tag = '<span class="tag-gechang">個唱</span>';
+    }
     return `${escapeHtml(name)}${tag ? ` ${tag}` : ""}`;
   }
 
@@ -501,6 +513,7 @@ window.DataLayer = (() => {
     isThemeConcert,
     isLakokConcert,
     isGechangConcert,
+    isGexunConcert,
     concertNameHTML,
     setlistForSession,
     sessionsForConcert,
