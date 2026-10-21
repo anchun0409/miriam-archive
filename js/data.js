@@ -203,15 +203,51 @@ window.DataLayer = (() => {
     return true;
   }
 
+  function themeConcerts() {
+    return raw.concerts
+      .filter((c) => isPersonalConcert(c))
+      .map((c) => {
+        const sessions = [...(c.sessions || [])].sort((a, b) =>
+          a.date < b.date ? -1 : a.date > b.date ? 1 : 0
+        );
+        const cities = [...new Set(sessions.map((s) => s.city).filter(Boolean))];
+        const countries = [
+          ...new Set(sessions.map((s) => s.country).filter(Boolean)),
+        ];
+        return {
+          concert: c,
+          sessions,
+          session_count: sessions.length,
+          first_date: sessions[0]?.date || "",
+          last_date: sessions[sessions.length - 1]?.date || "",
+          cities,
+          countries,
+        };
+      })
+      .sort((a, b) =>
+        a.first_date < b.first_date ? -1 : a.first_date > b.first_date ? 1 : 0
+      );
+  }
+
   /** Stats for Fun Facts page */
   function funFacts() {
     const sessions = allSessions();
+    const themes = themeConcerts();
 
     const totalShows = sessions.length;
     const personalShows = sessions.filter((s) => {
       const c = concertsById[s.concert_id];
       return c && isPersonalConcert(c);
     }).length;
+
+    const personalSessions = sessions.filter((s) => {
+      const c = concertsById[s.concert_id];
+      return c && isPersonalConcert(c);
+    });
+    const countries = new Set(
+      personalSessions.map((s) => s.country).filter(Boolean)
+    );
+    const cities = new Set(personalSessions.map((s) => s.city).filter(Boolean));
 
     // song count per session
     const perSession = {};
@@ -268,9 +304,8 @@ window.DataLayer = (() => {
       .sort((a, b) => b.times - a.times || a.song.title.localeCompare(b.song.title, "zh-Hant"))
       .slice(0, 5);
 
-    // Songs that appeared in Minor Classics / B minor, then later became
-    // main rundown at a non-Minor show (not only songs whose *first* live
-    // was Minor — e.g. 稀客 debuted earlier, then Minor → main elsewhere).
+    // Minor Classics / B minor → later main rundown elsewhere, excluding
+    // songs already sung more than 3 times before their first Minor date.
     const minorConcertIds = new Set(
       raw.concerts
         .filter((c) => /Minor Classics|B minor/i.test(c.concert_name))
@@ -292,6 +327,15 @@ window.DataLayer = (() => {
       const song = songsById[song_id];
       if (!song || song.is_other_artist) return;
       const minorDate = firstMinorDate[song_id];
+      const priorTimes = raw.performances.filter((p) => {
+        if (p.song_id !== song_id) return false;
+        const sess = sessionsById[p.session_id];
+        return sess && sess.date < minorDate;
+      }).length;
+      // Exclude songs already sung more than 3 times before Minor / B minor
+      // (= Minor was not 1st / 2nd / 3rd / 4th live). Keep prior ≤ 3.
+      if (priorTimes > 3) return;
+
       const laterMain = raw.performances.some((p) => {
         if (p.song_id !== song_id || p.is_main_rundown === false) return false;
         const sess = sessionsById[p.session_id];
@@ -305,6 +349,7 @@ window.DataLayer = (() => {
           first_date: minorDate,
           first_concert: origin?.concert_name || firstMinorConcert[song_id],
           first_concert_id: firstMinorConcert[song_id],
+          prior_times: priorTimes,
         });
       }
     });
@@ -315,6 +360,10 @@ window.DataLayer = (() => {
     return {
       totalShows,
       personalShows,
+      themeConcertCount: themes.length,
+      countryCount: countries.size,
+      cityCount: cities.size,
+      themeConcerts: themes,
       topSongCountShows,
       topSongs,
       topCities,
@@ -367,6 +416,8 @@ window.DataLayer = (() => {
     allPerformances,
     allSessions,
     funFacts,
+    themeConcerts,
+    isPersonalConcert,
     setlistForSession,
     sessionsForConcert,
   };

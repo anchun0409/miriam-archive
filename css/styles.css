@@ -888,6 +888,48 @@ button.ff-link{
   text-decoration-color:var(--purple-300);
 }
 
+.ff-lead a.ff-link{
+  font-weight:inherit;
+}
+
+.ff-lead a.ff-link strong{
+  color:inherit;
+}
+
+.concert-coverage-list{
+  margin-top:14px;
+}
+
+.concert-coverage-list li{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.concert-coverage-list .ff-rank{
+  flex:0 0 2.4em;
+  min-width:2.4em;
+  padding-top:1px;
+}
+
+.concert-coverage-list .ff-item-body{
+  flex:1 1 auto;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.concert-coverage-list .ff-item-body .ff-main{
+  text-align:left;
+}
+
+.concert-coverage-list .ff-item-body .ff-sub{
+  display:block;
+  margin:0;
+}
+
 .overlay-song{
   display:flex;
   flex-direction:column;

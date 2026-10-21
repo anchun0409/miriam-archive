@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sources · 楊千嬅Live曲目誌</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="brand-title">楊千嬅Live曲目誌</a>
+      <div class="brand-sub">Sources</div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">歌曲</a>
+      <a href="funfacts.html">Fun Facts</a>
+      <a href="concerts.html" class="active">Sources</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="ff-section">
+      <h2>本資料庫收錄的主題演唱會／巡演</h2>
+      <p class="ff-note">僅收錄個人演唱會及合作演唱會；音樂節、綜藝節目、商業演出等其他Live演出未納入統計。點名稱可查看場次歌單。</p>
+      <div id="concerts-root" class="ff-empty">載入中…</div>
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="setlist-modal" role="dialog" aria-modal="true" aria-labelledby="setlist-modal-title">
+    <div class="modal-panel">
+      <button type="button" class="modal-close" data-close-modal aria-label="關閉">×</button>
+      <div class="modal-header">
+        <div class="modal-title" id="setlist-modal-title"></div>
+        <div class="modal-sub" id="setlist-modal-sub"></div>
+      </div>
+      <label class="session-select-label" for="setlist-session-select">場次</label>
+      <select id="setlist-session-select" class="session-select"></select>
+      <div class="setlist-list" id="setlist-modal-list"></div>
+    </div>
+  </div>
+
+  <footer class="site-disclaimer">
+    <strong>關於本站與致謝</strong>
+    <p>本網站是由千嬅歌迷自發製作的非官方歌曲資料庫，整理千嬅在演唱會中的歌曲演出紀錄，方便查詢每首歌曾在哪些演唱會演出，也順便提醒哪些歌曲還未唱過live (bushi)。資料仍在持續整理，如有疏漏，歡迎指正～特別感謝羽佩與 Frankie 最初的《楊千嬅演唱會 Live 歌曲熱力圖》帶來啟發，以及羽佩的<a href="https://elaineyupei.github.io/my-live-chart/#lang=hant" target="_blank" rel="noopener noreferrer">《楊千嬅 Live 影響力係數榜》</a>整理的歌單與場次資料；亦感謝其他歌迷各平台無私分享歌單，讓這份紀錄更完整。</p>
+    <p class="disclaimer-meta">設計與維護：anchun<span class="disclaimer-gap"></span><span class="last-updated" id="last-updated">最後更新：—</span></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/overlay.js"></script>
+  <script src="js/last-updated.js"></script>
+  <script src="js/concerts.js"></script>
+</body>
+</html>

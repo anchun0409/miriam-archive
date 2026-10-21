@@ -29,6 +29,12 @@
     return `${y}-${m}`;
   }
 
+  function formatAsOfZh(ym) {
+    const [y, m] = String(ym).split("-");
+    if (!y || !m) return ym;
+    return `${y} 年 ${Number(m)} 月`;
+  }
+
   try {
     const DL = window.DataLayer;
     if (!DL || typeof DL.load !== "function") {
@@ -45,6 +51,7 @@
 
     const f = DL.funFacts();
     const asOfText = await asOfMonth();
+    const asOfZh = formatAsOfZh(asOfText);
 
     const topShows = (f.topSongCountShows || [])
       .map((row, i) => {
@@ -93,7 +100,7 @@
           .map(
             (row) => `<li>
               <button type="button" class="ff-link ff-main" data-open-song="${row.song.song_id}">${escapeHtml(row.song.title)}</button>
-              <span class="ff-sub">首次：${escapeHtml(row.first_date)} · ${escapeHtml(row.first_concert)}</span>
+              <span class="ff-sub">Minor：${escapeHtml(row.first_date)} · ${escapeHtml(row.first_concert)}</span>
             </li>`
           )
           .join("")
@@ -101,8 +108,8 @@
 
     root.innerHTML = `
       <section class="ff-section">
-        <h2>演唱會場次</h2>
-        <p class="ff-lead">截至 <strong>${asOfText}</strong>，千嬅已經開了 <strong>${f.totalShows}</strong> 場演唱會，其中 <strong>${f.personalShows}</strong> 場為個人演唱會。</p>
+        <h2>演唱會場次總結</h2>
+        <p class="ff-lead">截至 <strong>${asOfZh}</strong>，千嬅已舉行 <a class="ff-link" href="concerts.html"><strong>${f.themeConcertCount}</strong> 個主題演唱會／巡演</a>，共計 <strong>${f.totalShows}</strong> 場演出，其中 <strong>${f.personalShows}</strong> 場為個人演唱會；足跡遍及 <strong>${f.countryCount}</strong> 個國家及地區、<strong>${f.cityCount}</strong> 座城市。</p>
       </section>
 
       <section class="ff-section">
@@ -130,7 +137,7 @@
 
       <section class="ff-section">
         <h2>Encore 之王</h2>
-        <p class="ff-note">安可次數 Top 5（點歌名可查看歌曲卡）</p>
+        <p class="ff-note">安可次數 Top 5</p>
         <ol class="ff-list">
           ${encoreTop || `<li class="ff-empty">暫無資料。</li>`}
         </ol>
@@ -138,7 +145,7 @@
 
       <section class="ff-section">
         <h2>從 Minor 走進主 Rundown</h2>
-        <p class="ff-note">哪些曾經的「冷門歌」唱著唱著就「熱」了</p>
+        <p class="ff-note">哪些曾經的「冷門歌」唱著唱著就「熱」了（僅列 Minor／B minor 時為首數次現場演唱的歌曲）</p>
         <ul class="ff-list">${minorList}</ul>
       </section>
     `;
