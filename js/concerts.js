@@ -46,7 +46,7 @@
             return `<li>
               <span class="ff-rank">${i + 1}.</span>
               <div class="ff-item-body">
-                <button type="button" class="ff-link ff-main" data-open-concert="${c.concert_id}">${escapeHtml(c.concert_name)}</button>
+                <button type="button" class="ff-link ff-main" data-open-concert="${c.concert_id}">${DL.concertNameHTML(c)}</button>
                 <div class="ff-sub">${row.session_count} 場${range ? ` · ${escapeHtml(range)}` : ""}${place ? ` · ${escapeHtml(place)}` : ""}</div>
               </div>
             </li>`;

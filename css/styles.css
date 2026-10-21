@@ -834,6 +834,39 @@ footer,
   color:var(--text-muted);
 }
 
+.tag-gechang{
+  display:inline-block;
+  margin-left:2px;
+  padding:1px 7px;
+  border-radius:999px;
+  font-family:'Manrope', sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.06em;
+  line-height:1.4;
+  vertical-align:middle;
+  color:var(--purple-700);
+  background:var(--purple-150);
+  border:1px solid var(--border);
+}
+
+.ff-subhead{
+  margin:14px 0 8px;
+  font-family:'Manrope', sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.04em;
+  color:var(--text);
+}
+
+.ff-subhead:first-of-type{
+  margin-top:4px;
+}
+
+.ff-subhead + .ff-list + .ff-subhead{
+  margin-top:22px;
+}
+
 .ff-list{
   margin:0;
   padding-left:0;
@@ -900,20 +933,23 @@ button.ff-link{
   margin-top:14px;
 }
 
-.concert-coverage-list li{
+.concert-coverage-list li,
+.ff-list-stacked li{
   display:flex;
   flex-wrap:nowrap;
   align-items:flex-start;
   gap:10px;
 }
 
-.concert-coverage-list .ff-rank{
-  flex:0 0 2.4em;
-  min-width:2.4em;
+.concert-coverage-list .ff-rank,
+.ff-list-stacked .ff-rank{
+  flex:0 0 3.2em;
+  min-width:3.2em;
   padding-top:1px;
 }
 
-.concert-coverage-list .ff-item-body{
+.concert-coverage-list .ff-item-body,
+.ff-list-stacked .ff-item-body{
   flex:1 1 auto;
   min-width:0;
   display:flex;
@@ -921,11 +957,13 @@ button.ff-link{
   gap:2px;
 }
 
-.concert-coverage-list .ff-item-body .ff-main{
+.concert-coverage-list .ff-item-body .ff-main,
+.ff-list-stacked .ff-item-body .ff-main{
   text-align:left;
 }
 
-.concert-coverage-list .ff-item-body .ff-sub{
+.concert-coverage-list .ff-item-body .ff-sub,
+.ff-list-stacked .ff-item-body .ff-sub{
   display:block;
   margin:0;
 }

@@ -138,7 +138,7 @@ window.Overlay = (() => {
       : "";
 
     return `<div class="ticket">
-      <button type="button" class="ticket-tour" data-concert="${entry.concert_id}">${escapeHtml(entry.concert_name)}</button>
+      <button type="button" class="ticket-tour" data-concert="${entry.concert_id}">${DataLayer.concertNameHTML(entry.concert_id, entry.concert_name)}</button>
       ${sharedLocHTML}
       <div class="ticket-sessions">${yearBlocks}</div>
     </div>`;
@@ -159,7 +159,7 @@ window.Overlay = (() => {
     els.root.dataset.concertId = concertId;
     els.root.dataset.songId = highlightSongId || "";
     clearAlbumAttr();
-    els.title.textContent = concert.concert_name;
+    els.title.innerHTML = DataLayer.concertNameHTML(concert);
     els.sub.textContent = concert.concert_name_english || "";
 
     els.session.innerHTML = sessions

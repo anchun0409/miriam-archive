@@ -196,16 +196,84 @@ window.DataLayer = (() => {
     return Object.values(sessionsById);
   }
 
+  function isLakokConcert(concert) {
+    const name = concert?.concert_name || "";
+    return /拉闊|Music is Live/i.test(name);
+  }
+
+  // Fan label「個唱」for major solo arena/HK Coliseum-class tours
+  const GECHANG_CONCERT_IDS = new Set([
+    "C001",
+    "C015",
+    "C017",
+    "C022",
+    "C025",
+    "C002",
+    "C003",
+    "C004",
+    "C005",
+    "C033",
+    "C006",
+    "C007",
+    "C031",
+    "C034",
+    "C009",
+    "C008",
+    "C032",
+  ]);
+
+  function isGechangConcert(concertOrId) {
+    const id =
+      typeof concertOrId === "string"
+        ? concertOrId
+        : concertOrId?.concert_id;
+    return GECHANG_CONCERT_IDS.has(id);
+  }
+
+  function escapeHtml(s) {
+    return String(s ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  /** Concert name + optional small「個唱」badge (HTML). */
+  function concertNameHTML(concertOrId, nameOverride) {
+    const concert =
+      typeof concertOrId === "string"
+        ? concertsById[concertOrId]
+        : concertOrId;
+    const name =
+      nameOverride != null
+        ? nameOverride
+        : concert?.concert_name || String(concertOrId || "");
+    const tag = isGechangConcert(concert || concertOrId)
+      ? '<span class="tag-gechang">個唱</span>'
+      : "";
+    return `${escapeHtml(name)}${tag ? ` ${tag}` : ""}`;
+  }
+
+  function isCollabOrSpecialConcert(concert) {
+    const name = concert?.concert_name || "";
+    return /拉闊|Music is Live|六神合體|MOOV Live|ID CLUB|狂熱份子|又一個叱吒/i.test(
+      name
+    );
+  }
+
+  /** Solo ticketed tours/shows (excludes 拉闊 / collab / radio specials). */
   function isPersonalConcert(concert) {
-    const name = concert.concert_name || "";
-    // Guest / multi-artist / radio specials — not solo ticketed tours
-    if (/拉闊|六神合體|MOOV Live|ID CLUB|狂熱份子|又一個叱吒/i.test(name)) return false;
-    return true;
+    return !!(concert && !isCollabOrSpecialConcert(concert));
+  }
+
+  /** Sources + Fun Facts theme coverage: every concert in the database. */
+  function isThemeConcert(concert) {
+    return !!concert;
   }
 
   function themeConcerts() {
     return raw.concerts
-      .filter((c) => isPersonalConcert(c))
+      .filter((c) => isThemeConcert(c))
       .map((c) => {
         const sessions = [...(c.sessions || [])].sort((a, b) =>
           a.date < b.date ? -1 : a.date > b.date ? 1 : 0
@@ -222,6 +290,8 @@ window.DataLayer = (() => {
           last_date: sessions[sessions.length - 1]?.date || "",
           cities,
           countries,
+          is_lakok: isLakokConcert(c),
+          is_personal: isPersonalConcert(c),
         };
       })
       .sort((a, b) =>
@@ -240,14 +310,14 @@ window.DataLayer = (() => {
       return c && isPersonalConcert(c);
     }).length;
 
-    const personalSessions = sessions.filter((s) => {
+    const themeSessions = sessions.filter((s) => {
       const c = concertsById[s.concert_id];
-      return c && isPersonalConcert(c);
+      return c && isThemeConcert(c);
     });
     const countries = new Set(
-      personalSessions.map((s) => s.country).filter(Boolean)
+      themeSessions.map((s) => s.country).filter(Boolean)
     );
-    const cities = new Set(personalSessions.map((s) => s.city).filter(Boolean));
+    const cities = new Set(themeSessions.map((s) => s.city).filter(Boolean));
 
     // song count per session
     const perSession = {};
@@ -260,7 +330,7 @@ window.DataLayer = (() => {
         concert: concertsById[s.concert_id],
         count: perSession[s.session_id] || 0,
       }))
-      .filter((r) => r.count > 0 && r.concert && isPersonalConcert(r.concert))
+      .filter((r) => r.count > 0 && r.concert && isThemeConcert(r.concert))
       .sort((a, b) => b.count - a.count || (a.session.date < b.session.date ? 1 : -1));
     const topSongCountShows = sessionRows.slice(0, 5);
 
@@ -322,6 +392,7 @@ window.DataLayer = (() => {
         firstMinorConcert[p.song_id] = sess.concert_id;
       }
     });
+    const minorClassicsExclude = new Set(["超齡", "亦舒說", "我是羊"]);
     const minorThenMain = [];
     Object.keys(firstMinorDate).forEach((song_id) => {
       const song = songsById[song_id];
@@ -335,6 +406,15 @@ window.DataLayer = (() => {
       // Exclude songs already sung more than 3 times before Minor / B minor
       // (= Minor was not 1st / 2nd / 3rd / 4th live). Keep prior ≤ 3.
       if (priorTimes > 3) return;
+
+      const originName =
+        concertsById[firstMinorConcert[song_id]]?.concert_name || "";
+      if (
+        /Minor Classics/i.test(originName) &&
+        minorClassicsExclude.has(song.title)
+      ) {
+        return;
+      }
 
       const laterMain = raw.performances.some((p) => {
         if (p.song_id !== song_id || p.is_main_rundown === false) return false;
@@ -418,6 +498,10 @@ window.DataLayer = (() => {
     funFacts,
     themeConcerts,
     isPersonalConcert,
+    isThemeConcert,
+    isLakokConcert,
+    isGechangConcert,
+    concertNameHTML,
     setlistForSession,
     sessionsForConcert,
   };

@@ -59,8 +59,10 @@
         const s = row.session;
         return `<li>
           <span class="ff-rank">Top ${i + 1}</span>
-          <button type="button" class="ff-link ff-main" data-open-concert="${c.concert_id}" data-open-session="${s.session_id}">${escapeHtml(c.concert_name)}</button>
-          <span class="ff-sub">（${escapeHtml(s.city)} ${escapeHtml(s.date)}）· ${row.count} 首</span>
+          <div class="ff-item-body">
+            <button type="button" class="ff-link ff-main" data-open-concert="${c.concert_id}" data-open-session="${s.session_id}">${DL.concertNameHTML(c)}</button>
+            <div class="ff-sub">（${escapeHtml(s.city)} ${escapeHtml(s.date)}）· ${row.count} 首</div>
+          </div>
         </li>`;
       })
       .join("");
@@ -95,16 +97,40 @@
       )
       .join("");
 
-    const minorList = (f.minorThenMain || []).length
-      ? f.minorThenMain
-          .map(
-            (row) => `<li>
-              <button type="button" class="ff-link ff-main" data-open-song="${row.song.song_id}">${escapeHtml(row.song.title)}</button>
-              <span class="ff-sub">Minor：${escapeHtml(row.first_date)} · ${escapeHtml(row.first_concert)}</span>
-            </li>`
-          )
-          .join("")
-      : `<li class="ff-empty">暫無符合條件的歌曲。</li>`;
+    function minorSongLi(row) {
+      return `<li>
+        <button type="button" class="ff-link ff-main" data-open-song="${row.song.song_id}">${escapeHtml(row.song.title)}</button>
+        <span class="ff-sub">${escapeHtml(row.first_date)}</span>
+      </li>`;
+    }
+
+    const minorRows = f.minorThenMain || [];
+    const minorClassics = minorRows.filter((row) =>
+      /Minor Classics/i.test(row.first_concert || "")
+    );
+    const bMinor = minorRows.filter((row) => /B minor/i.test(row.first_concert || ""));
+    const minorOther = minorRows.filter(
+      (row) =>
+        !/Minor Classics/i.test(row.first_concert || "") &&
+        !/B minor/i.test(row.first_concert || "")
+    );
+
+    const minorSection = minorRows.length
+      ? [
+          minorClassics.length
+            ? `<h3 class="ff-subhead">Minor Classics</h3>
+               <ul class="ff-list">${minorClassics.map(minorSongLi).join("")}</ul>`
+            : "",
+          bMinor.length
+            ? `<h3 class="ff-subhead">B minor</h3>
+               <ul class="ff-list">${bMinor.map(minorSongLi).join("")}</ul>`
+            : "",
+          minorOther.length
+            ? `<h3 class="ff-subhead">其他</h3>
+               <ul class="ff-list">${minorOther.map(minorSongLi).join("")}</ul>`
+            : "",
+        ].join("")
+      : `<p class="ff-empty">暫無符合條件的歌曲。</p>`;
 
     root.innerHTML = `
       <section class="ff-section">
@@ -114,7 +140,7 @@
 
       <section class="ff-section">
         <h2>目前演唱歌曲數記錄最高是</h2>
-        <ol class="ff-list">
+        <ol class="ff-list ff-list-stacked">
           ${topShows || `<li class="ff-empty">暫無資料。</li>`}
         </ol>
       </section>
@@ -145,8 +171,8 @@
 
       <section class="ff-section">
         <h2>從 Minor 走進主 Rundown</h2>
-        <p class="ff-note">哪些曾經的「冷門歌」唱著唱著就「熱」了（僅列 Minor／B minor 時為首數次現場演唱的歌曲）</p>
-        <ul class="ff-list">${minorList}</ul>
+        <p class="ff-note">哪些曾經的「冷門歌」唱著唱著就「熱」了</p>
+        ${minorSection}
       </section>
     `;
 
