@@ -134,28 +134,29 @@
 
     root.innerHTML = `
       <section class="ff-section">
-        <h2>演唱會場次總結</h2>
+        <h2>演唱會足跡</h2>
         <p class="ff-lead">截至 <strong>${asOfZh}</strong>，千嬅已舉行 <a class="ff-link" href="concerts.html"><strong>${f.themeConcertCount}</strong> 個主題演唱會／巡演</a>，共計 <strong>${f.totalShows}</strong> 場演出，其中 <strong>${f.personalShows}</strong> 場為個人演唱會；足跡遍及 <strong>${f.countryCount}</strong> 個國家及地區、<strong>${f.cityCount}</strong> 座城市。</p>
       </section>
 
       <section class="ff-section">
-        <h2>目前演唱歌曲數記錄最高是</h2>
+        <h2>單場演唱歌曲數 Top 5</h2>
+        <p class="ff-note">哪幾場演唱會唱最多首歌（含encore）</p>
         <ol class="ff-list ff-list-stacked">
           ${topShows || `<li class="ff-empty">暫無資料。</li>`}
         </ol>
       </section>
 
       <section class="ff-section">
-        <h2>Top 10 演唱會曲目</h2>
-        <p class="ff-note">哪 10 首歌演唱會唱最多次（含 Encore）</p>
+        <h2>演唱會曲目 Top 10</h2>
+        <p class="ff-note">哪些歌被唱得最多</p>
         <ol class="ff-list">
           ${topSongs || `<li class="ff-empty">暫無資料。</li>`}
         </ol>
       </section>
 
       <section class="ff-section">
-        <h2>Top 5 演唱會城市</h2>
-        <p class="ff-note">哪 5 個城市開的次數最多</p>
+        <h2>演唱會城市 Top 5</h2>
+        <p class="ff-note">哪些城市開的次數最多</p>
         <ol class="ff-list">
           ${topCities || `<li class="ff-empty">暫無資料。</li>`}
         </ol>
@@ -163,7 +164,7 @@
 
       <section class="ff-section">
         <h2>Encore 之王</h2>
-        <p class="ff-note">安可次數 Top 5</p>
+        <p class="ff-note">哪些歌安可次數最多</p>
         <ol class="ff-list">
           ${encoreTop || `<li class="ff-empty">暫無資料。</li>`}
         </ol>
@@ -171,7 +172,7 @@
 
       <section class="ff-section">
         <h2>從 Minor 走進主 Rundown</h2>
-        <p class="ff-note">哪些曾經的「冷門歌」唱著唱著就「熱」了</p>
+        <p class="ff-note">哪些曾經的「冷門歌」被唱「熱」了</p>
         ${minorSection}
       </section>
     `;
